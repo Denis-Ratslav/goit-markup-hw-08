@@ -138,13 +138,13 @@ body {
     background: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    border-color: var(--accent-color);
+    border-style: none;
 }
 
 .modal-btn:hover,
 .modal-btn:focus {
     background: var(--button-active-color);
-    border-color: var(--button-active-color);
+
 }
 
 /* ============= END HERO ============= */
@@ -241,3 +241,62 @@ body {
 }
 
 /* ============= END footer ============= */
+
+/* ============= END page index ============= */
+
+/* ============= start page portfolio ============= */
+
+/* ============= start filter-section ============= */
+.filters-item {
+    display: inline-block;
+}
+
+.filter-btn {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color-dark);
+    background: #F5F4FA;
+    border-radius: 4px;
+    padding: 6px 22px;
+    border-style: none;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+    color: var(--primary-text-color-light);
+    background-color: var(--accent-color);
+}
+
+/* ============= end filter-section ============= */
+
+/* ============= start project-section ============= */
+.project {
+    width: 1170px;
+}
+
+.project-item {
+    display: inline-block;
+}
+
+.project-name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--primary-text-color-dark);
+}
+
+.project-category {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.67;
+    letter-spacing: 0.03em;
+    color: var(--secondary-text-color-light);
+}
+
+/* ============= end project-section ============= */
+/* ============= end page portfolio ============= */
