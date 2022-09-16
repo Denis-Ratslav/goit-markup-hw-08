@@ -9,13 +9,15 @@
     --primary-text-color-light: #ffffff;
     --secondary-text-color-dark: #000000;
     --secondary-text-color-light: #757575;
-    --bg-section-dark: #2f303a;
+    --bg-color-dark: #2f303a;
+    --bg-color-light: #f5f4fa;
     --primary-font-family: Roboto, sans-serif;
     --secondary-font-family: Raleway, sans-serif;
 }
 
 body {
     font-family: var(--primary-font-family);
+    color: var(--primary-text-color-dark);
 }
 
 .list {
@@ -31,7 +33,6 @@ body {
 .logo,
 .logo-span {
     font-family: var(--secondary-font-family);
-    font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
     letter-spacing: 0.03em;
@@ -54,12 +55,10 @@ body {
 }
 
 .section-title {
-    font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--primary-text-color-dark);
 }
 
 /* ============= END COMPONENTS ============= */
@@ -76,7 +75,7 @@ body {
 }
 
 .nav-list-link {
-    color: var(--primary-text-color-dark);
+    color: inherit;
 }
 
 .contact-mail,
@@ -111,7 +110,7 @@ body {
 
 .hero {
     width: 1600px;
-    background: var(--bg-section-dark);
+    background: var(--bg-color-dark);
 }
 
 .main-title {
@@ -144,7 +143,6 @@ body {
 .modal-btn:hover,
 .modal-btn:focus {
     background: var(--button-active-color);
-
 }
 
 /* ============= END HERO ============= */
@@ -156,16 +154,13 @@ body {
 }
 
 .specialty-subtitle {
-    font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--primary-text-color-dark);
 }
 
 .specialty-description {
-    font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -190,7 +185,7 @@ body {
 /* ============= start team ============= */
 
 .team {
-    background: #f5f4fa;
+    background: var(--bg-color-light);
 }
 
 .team-item {
@@ -207,11 +202,9 @@ body {
     line-height: 1.19;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--primary-text-color-dark);
 }
 
 .team-position {
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
@@ -224,20 +217,21 @@ body {
 /* ============= start footer ============= */
 
 .contacts {
-    background: var(--bg-section-dark);
+    background: var(--bg-color-dark);
 }
 
 .address-link {
     font-style: normal;
-    font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--primary-text-color-light);
+    opacity: 0.6;
 }
 
-.opacity {
-    opacity: 0.6;
+.address-link:hover,
+.address-link:focus {
+    opacity: 1;
 }
 
 /* ============= END footer ============= */
@@ -247,6 +241,7 @@ body {
 /* ============= start page portfolio ============= */
 
 /* ============= start filter-section ============= */
+
 .filters-item {
     display: inline-block;
 }
@@ -258,11 +253,12 @@ body {
     line-height: 1.63;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--primary-text-color-dark);
-    background: #F5F4FA;
+    color: inherit;
+    background: var(--bg-color-light);
     border-radius: 4px;
     padding: 6px 22px;
     border-style: none;
+    cursor: pointer;
 }
 
 .filter-btn:hover,
@@ -274,6 +270,7 @@ body {
 /* ============= end filter-section ============= */
 
 /* ============= start project-section ============= */
+
 .project {
     width: 1170px;
 }
@@ -283,15 +280,12 @@ body {
 }
 
 .project-name {
-    font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    color: var(--primary-text-color-dark);
 }
 
 .project-category {
-    font-weight: 400;
     font-size: 16px;
     line-height: 1.67;
     letter-spacing: 0.03em;
