@@ -18,6 +18,7 @@
 body {
     font-family: var(--primary-font-family);
     color: var(--primary-text-color-dark);
+    background-color: var(--primary-text-color-light);
     font-size: 14px;
     letter-spacing: 0.03em;
 }
