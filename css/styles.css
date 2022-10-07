@@ -9,6 +9,7 @@
     --bg-color-light: #f5f4fa;
     --primary-font-family: Roboto, sans-serif;
     --secondary-font-family: Raleway, sans-serif;
+    --card-set-gap: 30px;
 }
 
 body {
@@ -19,12 +20,20 @@ body {
     letter-spacing: 0.03em;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+/* ---------RESET--------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin-top: 0;
     margin-bottom: 0;
 }
 
-ul, ol {
+ul,
+ol {
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
@@ -32,6 +41,7 @@ ul, ol {
 
 img {
     display: block;
+    width: 100%;
 }
 
 address {
@@ -63,7 +73,6 @@ address {
     font-family: var(--secondary-font-family);
     font-size: 26px;
     line-height: 1.2;
-
 }
 
 .logo-dark {
@@ -89,44 +98,24 @@ address {
     padding-bottom: 94px;
 }
 
+.flex-container {
+    display: flex;
+    align-items: center;
+}
+
 /* ============= END COMPONENTS ============= */
 
 /* ============= START HEADER ============= */
-.header-container {
-    display: flex;
-    align-items: center;
-}
 
 .page-header {
-    padding-top: 24px;
-    padding-bottom: 25px;
+    border-bottom: 1px solid #ececec;
 }
 
 .page-navigation {
-    display: flex;
-    align-items: center;
     margin-right: auto;
 }
 
-.navigation-list {
-    display: flex;
-    align-items: center;
-}
-
-.contact-list {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.nav-list-item:not(:last-child) {
-    margin-right: 50px;
-}
-
+.nav-list-item:not(:last-child),
 .contact-item:not(:last-child) {
     margin-right: 50px;
 }
@@ -140,6 +129,9 @@ address {
 }
 
 .nav-list-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
     color: inherit;
 }
 
@@ -158,8 +150,6 @@ address {
     color: var(--accent-color);
 }
 
-
-
 /* ============= END HEADER ============= */
 
 /* ============= START HERO ============= */
@@ -167,39 +157,46 @@ address {
 .hero {
     padding-top: 200px;
     padding-bottom: 200px;
+
     background: var(--bg-color-dark);
 }
 
 .main-title {
+    margin-bottom: 30px;
+
+    color: var(--primary-text-color-light);
+
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--primary-text-color-light);
-    margin-bottom: 30px;
 }
 
 .modal-btn {
+    display: block;
+    padding: 10px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 216px;
+    min-height: 50px;
+
+    color: var(--primary-text-color-light);
+    background: var(--accent-color);
+
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.85;
-    display: flex;
     text-align: center;
     letter-spacing: 0.06em;
     cursor: pointer;
-    color: var(--primary-text-color-light);
-    background: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border-style: none;
-    min-width: 216px;
-    min-height: 50px;
-    padding: 10px 30px;
-    margin-left: auto;
-    margin-right: auto;
+
+
 }
 
 .modal-btn:hover,
@@ -213,7 +210,6 @@ address {
 
 .specialty-title {
     opacity: 0.2;
-
 }
 
 .specialty-subtitle {
@@ -225,21 +221,19 @@ address {
 .specialty-description {
     line-height: 1.71;
     color: var(--secondary-text-color-light);
-    width: 270px;
 }
 
 .specialty-list {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -30px;
-    margin-top: -30px;
-
+    margin-left: calc(-1 * var(--card-set-gap));
+    margin-top: calc(-1 * var(--card-set-gap));
 }
 
 .specialty-item {
-    flex-basis: calc((100% - 120px)/4);
-    margin-left: 30px;
-    margin-top: 30px;
+    flex-basis: calc(100% / 4 - var(--card-set-gap));
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
 }
 
 /* ============= END specialty ============= */
@@ -256,14 +250,14 @@ address {
 .activities-list {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -30px;
-    margin-top: -30px;
+    margin-left: calc(-1 * var(--card-set-gap));
+    margin-top: calc(-1 * var(--card-set-gap));
 }
 
 .activities-item {
-    flex-basis: calc((100% - 90px)/3);
-    margin-left: 30px;
-    margin-top: 30px;
+    flex-basis: calc(100% / 3 - var(--card-set-gap));
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
 }
 
 /* ============= END activities ============= */
@@ -272,24 +266,29 @@ address {
 
 .team {
     background: var(--bg-color-light);
+}
 
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--card-set-gap));
+    margin-top: calc(-1 * var(--card-set-gap));
 }
 
 .team-item {
+    flex-basis: calc(100% / 4 - var(--card-set-gap));
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
 
     background: var(--primary-text-color-light);
+
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-
-    flex-basis: calc((100% - 120px)/4);
-    margin-left: 30px;
-    margin-top: 30px;
 }
 
 .team-content-wrapper {
     padding: 30px 20px;
-
 }
 
 .team-name {
@@ -300,20 +299,13 @@ address {
 }
 
 .team-position {
+    color: var(--secondary-text-color-light);
+
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
-    color: var(--secondary-text-color-light);
+
 }
-
-.team-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -30px;
-    margin-top: -30px;
-}
-
-
 
 .team-name {
     margin-bottom: 10px;
@@ -324,9 +316,10 @@ address {
 /* ============= start footer ============= */
 
 .contacts {
-    background: var(--bg-color-dark);
     padding-top: 60px;
     padding-bottom: 60px;
+
+    background: var(--bg-color-dark);
 }
 
 .contacts .logo {
@@ -338,10 +331,10 @@ address {
 }
 
 .address-link {
-
-    line-height: 1.71;
     color: var(--primary-text-color-light);
     opacity: 0.6;
+
+    line-height: 1.71;
 }
 
 .address-link:hover,
@@ -356,9 +349,7 @@ address {
 /* ============= start page portfolio ============= */
 
 /* ============= start filter-section ============= */
-.filter-section {
-    border-top: 1px solid #ECECEC;
-}
+
 
 .filters-list {
     display: flex;
@@ -375,15 +366,17 @@ address {
 }
 
 .filter-btn {
+    padding: 6px 22px;
+
+    background: var(--bg-color-light);
+
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.63;
     text-align: center;
     color: inherit;
-    background: var(--bg-color-light);
     border-radius: 4px;
-    padding: 6px 22px;
     border-style: none;
     cursor: pointer;
 }
@@ -401,23 +394,21 @@ address {
 .project-list {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -30px;
-    margin-top: -30px;
-
+    margin-left: calc(-1 * var(--card-set-gap));
+    margin-top: calc(-1 * var(--card-set-gap));
 }
 
 .project-item {
-
-    flex-basis: calc((100% - 3*30px)/3);
-    margin-left: 30px;
-    margin-top: 30px;
-
+    flex-basis: calc(100% / 3 - var(--card-set-gap));
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
 }
 
 .project-content-wrapper {
     padding: 20px 22px 20px 24px;
+
     background: var(--primary-text-color-light);
-    border: 1px solid #EEEEEE;
+    border: 1px solid #eeeeee;
 }
 
 .project-name {
