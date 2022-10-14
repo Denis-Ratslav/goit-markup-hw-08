@@ -159,8 +159,19 @@ address {
 .hero {
     padding-top: 200px;
     padding-bottom: 200px;
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #C4C4C4;
 
-    background: var(--bg-color-dark);
+    background-image:
+        linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/img-index/new_photo-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
 }
 
 .main-title {
@@ -185,7 +196,7 @@ address {
     min-height: 50px;
 
     color: var(--primary-text-color-light);
-    background: var(--accent-color);
+    background-color: var(--accent-color);
 
     font-family: inherit;
     font-weight: 700;
@@ -203,7 +214,7 @@ address {
 
 .modal-btn:hover,
 .modal-btn:focus {
-    background: var(--button-active-color);
+    background-color: var(--button-active-color);
 }
 
 /* ============= END HERO ============= */
@@ -238,6 +249,35 @@ address {
     margin-top: var(--card-set-gap);
 }
 
+.specialty-item::before {
+    display: block;
+    content: "";
+
+    height: 120px;
+
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--bg-color-light);
+    margin-bottom: 30px;
+}
+
+.specialty-item.icon-antenna::before {
+    background-image: url(../images/img-index/antenna.svg);
+}
+
+.specialty-item.icon-clock::before {
+    background-image: url(../images/img-index/clock.svg);
+}
+
+.specialty-item.icon-diagram::before {
+    background-image: url(../images/img-index/diagram.svg);
+}
+
+.specialty-item.icon-astronaut::before {
+    background-image: url(../images/img-index/astronaut.svg);
+}
+
 /* ============= END specialty ============= */
 
 /* ============= start activities ============= */
@@ -267,7 +307,7 @@ address {
 /* ============= start team ============= */
 
 .team {
-    background: var(--bg-color-light);
+    background-color: var(--bg-color-light);
 }
 
 .team-list {
@@ -282,7 +322,7 @@ address {
     margin-left: var(--card-set-gap);
     margin-top: var(--card-set-gap);
 
-    background: var(--primary-text-color-light);
+    background-color: var(--primary-text-color-light);
 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -316,16 +356,20 @@ address {
 /* ============= END team ============= */
 
 /* ============= start footer ============= */
+.contacts>.container {
+    display: flex;
+}
 
 .contacts {
     padding-top: 60px;
     padding-bottom: 60px;
 
-    background: var(--bg-color-dark);
+    background-color: var(--bg-color-dark);
 }
 
 .contacts .logo {
     margin-bottom: 20px;
+    margin-right: 156px;
 }
 
 .address-item:not(:last-child) {
@@ -342,6 +386,53 @@ address {
 .address-link:hover,
 .address-link:focus {
     opacity: 1;
+}
+
+.footer-paragraph {
+    margin-top: 12px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--primary-text-color-light);
+}
+
+.footer-social .social-link {
+    display: inline-block;
+    height: 44px;
+    width: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    color: var(--primary-text-color-light);
+}
+
+.footer-social .social-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.footer-social .social-link:hover,
+.footer-social .social-link:focus {
+    background-color: var(--accent-color);
+}
+
+.social-link.icon-instagram {
+    background-image: url(../images/img-index/instagram.svg);
+}
+
+.social-link.icon-twitter {
+    background-image: url(../images/img-index/twitter.svg);
+}
+
+.social-link.icon-facebook {
+    background-image: url(../images/img-index/facebook.svg);
+}
+
+.social-link.icon-linkedin {
+    background-image: url(../images/img-index/linkedin.svg);
 }
 
 /* ============= END footer ============= */
@@ -370,7 +461,7 @@ address {
 .filter-btn {
     padding: 6px 22px;
 
-    background: var(--bg-color-light);
+    background-color: var(--bg-color-light);
 
     font-family: inherit;
     font-weight: 500;
@@ -409,7 +500,7 @@ address {
 .project-content-wrapper {
     padding: 20px 22px 20px 24px;
 
-    background: var(--primary-text-color-light);
+    background-color: var(--primary-text-color-light);
     border: 1px solid #eeeeee;
 }
 
