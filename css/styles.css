@@ -266,6 +266,7 @@ address {
 }
 
 .specialty-subtitle {
+    font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -424,8 +425,12 @@ address {
     display: flex;
 }
 
+.address-group {
+    width: 231px;
+}
+
 .footer-contacts {
-    width: 300px;
+    margin-right: 70px;
 }
 
 .contacts {
