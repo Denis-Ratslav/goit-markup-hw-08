@@ -155,12 +155,14 @@
 								src="./images/img-index/activities-img2.jpg"
 								alt="Мобільні додатки"
 							/>
+							<h3 class="subtitle">Мобільні додатки</h3>
 						</li>
 						<li class="activities-item">
 							<img
 								src="./images/img-index/activities-img3.jpg"
 								alt="Дизайнерські рішення"
 							/>
+							<h3 class="subtitle">Дизайнерські рішення</h3>
 						</li>
 					</ul>
 				</div>
@@ -519,6 +521,13 @@
 			</div>
 		</footer>
 		<!-- Скрипт -->
-		<script src="./js/modal.js"></script>
+		<script>
+			const { height: pageHeaderHeight } = document
+				.querySelector(".page-header")
+				.getBoundingClientRect();
+
+			document.body.style.paddingTop = `${pageHeaderHeight}px`;
+		</script>
+		<!-- <script src="./js/modal.js"></script> -->
 	</body>
 </html>
