@@ -9,6 +9,7 @@
     --bg-color-light: #f5f4fa;
     --bg-color-hero: #C4C4C4;
     --bg-image-color-hero: rgba(47, 48, 58, 0.4);
+    --bg-image-color-activities: rgba(47, 48, 58, 0.8);
     --svg-color: #AFB1B8;
     --border-bottom-colors: #ececec;
     --border-project-color: #eeeeee;
@@ -122,6 +123,12 @@ address {
     overflow: hidden;
 }
 
+.subtitle {
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
 .social-link {
     width: 44px;
     height: 44px;
@@ -145,6 +152,7 @@ address {
 }
 
 .page-navigation {
+
     margin-right: auto;
 }
 
@@ -170,6 +178,7 @@ address {
 }
 
 .nav-list-link {
+
     color: inherit;
 }
 
@@ -194,6 +203,22 @@ address {
 
 .contact-item .icon {
     margin-right: 10px;
+}
+
+.nav-list-item {
+    position: relative;
+}
+
+.active-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
 }
 
 /* ============= END HEADER ============= */
@@ -265,13 +290,6 @@ address {
     opacity: 0.2;
 }
 
-.specialty-subtitle {
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
 .specialty-description {
     line-height: 1.71;
     color: var(--secondary-text-color-light);
@@ -288,6 +306,10 @@ address {
     flex-basis: calc(100% / 4 - var(--card-set-gap));
     margin-left: var(--card-set-gap);
     margin-top: var(--card-set-gap);
+}
+
+.specialty-item .subtitle {
+    margin-bottom: 10px;
 }
 
 .speciality-dg-image {
@@ -321,6 +343,24 @@ address {
     flex-basis: calc(100% / 3 - var(--card-set-gap));
     margin-left: var(--card-set-gap);
     margin-top: var(--card-set-gap);
+    position: relative;
+}
+
+.activities-item .subtitle {
+    position: absolute;
+    bottom: 0;
+    /* display: flex; */
+    width: 100%;
+
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    color: var(--primary-text-color-light);
+    background-color: var(--bg-image-color-activities);
+    ;
 }
 
 /* ============= END activities ============= */
