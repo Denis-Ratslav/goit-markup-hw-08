@@ -9,7 +9,7 @@
     --bg-color-light: #f5f4fa;
     --bg-color-hero: #C4C4C4;
     --bg-color-project-thumb: rgba(33, 150, 243, 0.9);
-    ;
+    --backdrop-color: rgba(0, 0, 0, 0.2);
     --bg-image-color-hero: rgba(47, 48, 58, 0.4);
     --bg-image-color-activities: rgba(47, 48, 58, 0.8);
 
@@ -20,6 +20,9 @@
     --secondary-font-family: Raleway, sans-serif;
     --card-set-gap: 30px;
     --primary-font-size: 16px;
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --duration: 250ms;
+
 }
 
 body {
@@ -28,7 +31,6 @@ body {
     background-color: var(--primary-text-color-light);
     font-size: 14px;
     letter-spacing: 0.03em;
-    /* padding-top: 80px; */
 }
 
 /* ---------RESET--------- */
@@ -85,6 +87,12 @@ address {
     font-family: var(--secondary-font-family);
     font-size: 26px;
     line-height: 1.2;
+    transform: scale(1);
+    transition: transform var(--duration) var(--timing-function);
+}
+
+.logo:focus, .logo:hover {
+    transform: scale(1.03);
 }
 
 .logo-dark {
@@ -158,7 +166,7 @@ address {
     top: 0;
     left: 0;
     background-color: var(--primary-text-color-light);
-    z-index: 2;
+    z-index: 100;
     min-height: 80px;
 }
 
@@ -186,10 +194,10 @@ address {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    transition: color var(--duration) var(--timing-function);
 }
 
 .nav-list-link {
-
     color: inherit;
 }
 
@@ -216,7 +224,7 @@ address {
     margin-right: 10px;
 }
 
-.nav-list-item {
+.active-link {
     position: relative;
 }
 
@@ -225,7 +233,7 @@ address {
     position: absolute;
     bottom: 0;
     left: 0;
-    display: inline-block;
+    display: block;
     width: 100%;
     height: 2px;
     border-radius: 2px;
@@ -286,6 +294,7 @@ address {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border-style: none;
+    transition: background-color var(--duration) var(--timing-function);
 }
 
 .modal-btn:hover,
@@ -430,6 +439,8 @@ address {
 
 .team-social .social-link {
     color: var(--svg-color);
+    background-color: var(--primary-text-color-light);
+    transition: background-color var(--duration) var(--timing-function), color var(--duration) var(--timing-function);
 }
 
 .team-social .social-link:hover,
@@ -451,8 +462,10 @@ address {
     width: 170px;
     height: 92px;
     color: var(--svg-color);
-    border: 1px solid var(--svg-color);
+    border: 1px solid;
+    border-color: var(--svg-color);
     border-radius: 4px;
+    transition: color var(--duration) var(--timing-function), border-color var(--duration) var(--timing-function);
 }
 
 
@@ -503,6 +516,7 @@ address {
     opacity: 0.6;
 
     line-height: 1.71;
+    transition: opacity var(--duration) var(--timing-function);
 }
 
 .address-link:hover,
@@ -518,18 +532,24 @@ address {
     color: var(--primary-text-color-light);
 }
 
-.footer-social .social-link {
+.footer-social-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-social-list .social-link {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     color: var(--primary-text-color-light);
+    transition: background-color var(--duration) var(--timing-function);
 }
 
-.footer-social .social-item:not(:last-child) {
+.footer-social-list .social-item:not(:last-child) {
     margin-right: 10px;
 }
 
-.footer-social .social-link:hover,
-.footer-social .social-link:focus {
+.footer-social-list .social-link:hover,
+.footer-social-list .social-link:focus {
     background-color: var(--accent-color);
 }
 
@@ -538,6 +558,47 @@ address {
 }
 
 /* ============= END footer ============= */
+
+/* ============= start modal ============= */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: var(--backdrop-color);
+    opacity: 1;
+    transition: opacity var(--duration) var(--timing-function);
+
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.8);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: translate var(--duration) var(--timing-function);
+    min-width: 528px;
+    min-height: 581px;
+
+    background-color: var(--primary-text-color-light);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+}
+
+/* ============= end modal ============= */
 
 /* ============= END page index ============= */
 
@@ -575,6 +636,8 @@ address {
     border-radius: 4px;
     border-style: none;
     cursor: pointer;
+    box-shadow: none;
+    transition: color var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), box-shadow var(--duration) var(--timing-function);
 }
 
 .filter-btn:hover,
@@ -603,47 +666,65 @@ address {
 
 .project-link {
     display: block;
-
-
+    box-shadow: none;
+    transition: box-shadow var(--duration) var(--timing-function);
 }
 
 .project-thumb {
     position: relative;
+    overflow: hidden;
 }
 
-.project-thumb::before {
-    content: "";
-    display: inline-block;
+.project-overlay {
+
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: var(--bg-color-project-thumb);
-    opacity: 0;
+
+    transform: translateY(100%);
+
+    transition: transform var(--duration) var(--timing-function);
+
 }
 
 .project-description {
     position: absolute;
-    opacity: 0;
+
     top: 50%;
-    transform: translateY(-50%);
+    left: 0;
     width: 100%;
+    transform: translateY(-50%);
     padding-left: 24px;
     padding-right: 24px;
     font-size: 18px;
     line-height: 1.56;
     letter-spacing: 0.03em;
     color: var(--primary-text-color-light);
+    opacity: 0;
+    transition: opacity var(--duration) var(--timing-function) 250ms;
+
+
 }
 
-.project-link:hover .project-description {
+
+.project-link:hover .project-description,
+.project-link:focus .project-description {
+
     opacity: 1;
 }
 
-.project-link:hover .project-thumb::before {
-    opacity: 1;
+
+.project-link:hover .project-overlay,
+.project-link:focus .project-overlay {
+    transform: translateY(0);
+
 }
+
+
 
 .project-link:hover,
 .project-link:focus {
