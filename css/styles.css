@@ -7,13 +7,13 @@
     --secondary-text-color-light: #757575;
     --bg-color-dark: #2f303a;
     --bg-color-light: #f5f4fa;
-    --bg-color-hero: #C4C4C4;
+    --bg-color-hero: #c4c4c4;
     --bg-color-project-thumb: rgba(33, 150, 243, 0.9);
     --backdrop-color: rgba(0, 0, 0, 0.2);
     --bg-image-color-hero: rgba(47, 48, 58, 0.4);
     --bg-image-color-activities: rgba(47, 48, 58, 0.8);
 
-    --svg-color: #AFB1B8;
+    --svg-color: #afb1b8;
     --border-bottom-colors: #ececec;
     --border-project-color: #eeeeee;
     --primary-font-family: Roboto, sans-serif;
@@ -22,7 +22,6 @@
     --primary-font-size: 16px;
     --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --duration: 250ms;
-
 }
 
 body {
@@ -91,7 +90,8 @@ address {
     transition: transform var(--duration) var(--timing-function);
 }
 
-.logo:focus, .logo:hover {
+.logo:focus,
+.logo:hover {
     transform: scale(1.03);
 }
 
@@ -171,7 +171,6 @@ address {
 }
 
 .page-navigation {
-
     margin-right: auto;
 }
 
@@ -253,8 +252,9 @@ address {
     margin-right: auto;
     background-color: var(--bg-color-hero);
 
-    background-image:
-        linear-gradient(var(--bg-image-color-hero), var(--bg-image-color-hero)), url("../images/img-index/new_photo-hero.jpg");
+    background-image: linear-gradient(var(--bg-image-color-hero),
+            var(--bg-image-color-hero)),
+        url("../images/img-index/new_photo-hero.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -378,7 +378,6 @@ address {
 
     color: var(--primary-text-color-light);
     background-color: var(--bg-image-color-activities);
-    ;
 }
 
 /* ============= END activities ============= */
@@ -440,7 +439,8 @@ address {
 .team-social .social-link {
     color: var(--svg-color);
     background-color: var(--primary-text-color-light);
-    transition: background-color var(--duration) var(--timing-function), color var(--duration) var(--timing-function);
+    transition: background-color var(--duration) var(--timing-function),
+        color var(--duration) var(--timing-function);
 }
 
 .team-social .social-link:hover,
@@ -465,11 +465,12 @@ address {
     border: 1px solid;
     border-color: var(--svg-color);
     border-radius: 4px;
-    transition: color var(--duration) var(--timing-function), border-color var(--duration) var(--timing-function);
+    transition: color var(--duration) var(--timing-function),
+        border-color var(--duration) var(--timing-function);
 }
 
-
-.clientage-link:hover, .clientage-link:focus {
+.clientage-link:hover,
+.clientage-link:focus {
     color: var(--accent-color);
     border-color: var(--accent-color);
 }
@@ -479,8 +480,6 @@ address {
 }
 
 /* ============= END clientage ============= */
-
-
 
 /* ============= start footer ============= */
 .contacts>.container {
@@ -571,7 +570,6 @@ address {
     background-color: var(--backdrop-color);
     opacity: 1;
     transition: opacity var(--duration) var(--timing-function);
-
 }
 
 .backdrop.is-hidden {
@@ -593,9 +591,9 @@ address {
     min-height: 581px;
 
     background-color: var(--primary-text-color-light);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-
 }
 
 .modal-btn-close {
@@ -612,11 +610,13 @@ address {
     background: var(--primary-text-color-light);
     border: 1px solid rgba(0, 0, 0, 0.1);
     color: var(--secondary-text-color-dark);
-    transition: color var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function);
+    transition: color var(--duration) var(--timing-function),
+        background-color var(--duration) var(--timing-function);
     cursor: pointer;
 }
 
-.modal-btn-close:focus, .modal-btn-close:hover {
+.modal-btn-close:focus,
+.modal-btn-close:hover {
     color: var(--primary-text-color-light);
     background-color: var(--accent-color);
 }
@@ -628,7 +628,6 @@ address {
 /* ============= start page portfolio ============= */
 
 /* ============= start filter-section ============= */
-
 
 .filters-list {
     display: flex;
@@ -660,14 +659,17 @@ address {
     border-style: none;
     cursor: pointer;
     box-shadow: none;
-    transition: color var(--duration) var(--timing-function), background-color var(--duration) var(--timing-function), box-shadow var(--duration) var(--timing-function);
+    transition: color var(--duration) var(--timing-function),
+        background-color var(--duration) var(--timing-function),
+        box-shadow var(--duration) var(--timing-function);
 }
 
 .filter-btn:hover,
 .filter-btn:focus {
     color: var(--primary-text-color-light);
     background-color: var(--accent-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* ============= end filter-section ============= */
@@ -699,7 +701,6 @@ address {
 }
 
 .project-overlay {
-
     display: block;
     position: absolute;
     top: 0;
@@ -711,7 +712,6 @@ address {
     transform: translateY(100%);
 
     transition: transform var(--duration) var(--timing-function);
-
 }
 
 .project-description {
@@ -729,29 +729,22 @@ address {
     color: var(--primary-text-color-light);
     opacity: 0;
     transition: opacity var(--duration) var(--timing-function) 250ms;
-
-
 }
-
 
 .project-link:hover .project-description,
 .project-link:focus .project-description {
-
     opacity: 1;
 }
-
 
 .project-link:hover .project-overlay,
 .project-link:focus .project-overlay {
     transform: translateY(0);
-
 }
-
-
 
 .project-link:hover,
 .project-link:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-content-wrapper {
