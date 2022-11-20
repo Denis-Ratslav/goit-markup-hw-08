@@ -529,15 +529,39 @@
 						<use href="./images/img-index/icons.svg#icon-close"></use>
 					</svg>
 				</button>
+				<form class="js-order-form">
+					<p>Залиште свої дані, ми вам передзвонимо</p>
+					<label for="user-name">Ім'я</label>
+					<input type="text" name="user-name" id="user-name" />
+
+					<label for="user-tel">Телефон</label>
+					<input type="tel" name="user-tel" id="user-tel" />
+
+					<label for="user-email">Пошта</label>
+					<input type="email" name="user-email" id="user-email" />
+				</form>
 			</div>
 		</div>
 		<!-- Скрипт -->
-		<script>
+		<!-- <script>
 			const { height: pageHeaderHeight } = document
 				.querySelector(".page-header")
 				.getBoundingClientRect();
 
 			document.body.style.paddingTop = `${pageHeaderHeight}px`;
+		</script> -->
+		<script>
+			(() => {
+				document
+					.querySelector(".js-order-form")
+					.addEventListener("submit", e => {
+						e.preventDefault();
+
+						new FormData(e.currentTarget).forEach((value, name) =>
+							console.log(`${name}: ${value}`),
+						);
+					});
+			})();
 		</script>
 		<script src="./js/modal.js"></script>
 	</body>
