@@ -520,8 +520,30 @@
 						</li>
 					</ul>
 				</div>
+				<form class="footer-form">
+					<div class="subs-form">
+						<label class="footer-paragraph" for="subs-email">
+							Підпишіться на розсилку
+						</label>
+						<input
+							class="subs-input"
+							type="email"
+							name="subs-email"
+							id="subs-email"
+							placeholder="E-mail"
+						/>
+					</div>
+					<button class="subs-button" type="submit">
+						Підписатися
+						<svg class="icon" width="24" height="24">
+							<use href="./images/img-index/icons.svg#icon-send"></use>
+						</svg>
+					</button>
+				</form>
 			</div>
 		</footer>
+
+		<!-- modal -->
 		<div class="backdrop is-hidden" data-modal>
 			<div class="modal">
 				<p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
@@ -586,29 +608,37 @@
 								name="accept"
 								id="user-accept"
 							/>
-							<!-- <span class="form-checkbox">
-								
-							</span> -->
+							<span class="form-checkbox">
+								<svg class="icon-checked icon" width="16" height="15">
+									<use
+										class="icon-vector"
+										href="./images/img-index/icons.svg#icon-check"
+									></use>
+								</svg>
+							</span>
 							<span class="checkbox-text">
 								Погоджуюся з розсилкою та приймаю
 							</span>
+
+							<a href="#" class="checkbox-link link">Умови договору</a>
 						</label>
-						<a href="#" class="checkbox-link">Умови договору</a>
 					</div>
 
-					<button class="form-button" type="submit">Відправити</button>
+					<button data-modal-close class="form-button" type="submit">
+						Відправити
+					</button>
 				</form>
 			</div>
 		</div>
 		<!-- Скрипт -->
-		<!-- <script>
+		<script>
 			const { height: pageHeaderHeight } = document
 				.querySelector(".page-header")
 				.getBoundingClientRect();
 
 			document.body.style.paddingTop = `${pageHeaderHeight}px`;
-		</script> -->
-		<script>
+		</script>
+		<!-- <script>
 			(() => {
 				document.querySelector(".modal-form").addEventListener("submit", e => {
 					e.preventDefault();
@@ -618,7 +648,7 @@
 					);
 				});
 			})();
-		</script>
+		</script> -->
 		<script src="./js/modal.js"></script>
 	</body>
 </html>
