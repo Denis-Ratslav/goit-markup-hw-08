@@ -801,8 +801,10 @@ textarea {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-
+    cursor: pointer;
 }
+
+
 
 .form-checkbox {
     display: flex;
@@ -812,8 +814,13 @@ textarea {
     height: 15px;
     border: 2px solid var(--primary-text-color-dark);
     border-radius: 3px;
-
+    transition: border var(--duration) var(--timing-function);
     margin-right: 8px;
+}
+
+.modal-checked:hover+.form-checkbox,
+.modal-checked:focus+.form-checkbox {
+    border: 2px solid var(--accent-color);
 }
 
 .modal-checked:checked+.form-checkbox {
