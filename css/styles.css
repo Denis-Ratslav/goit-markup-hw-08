@@ -709,7 +709,7 @@ textarea {
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
-    /* text-align: center; */
+    text-align: center;
     letter-spacing: 0.03em;
 
     color: var(--primary-text-color-dark);
@@ -717,6 +717,7 @@ textarea {
 }
 
 .modal-label {
+    display: block;
     margin-bottom: 4px;
     /* font-weight: 400; */
     font-size: 12px;
@@ -727,10 +728,11 @@ textarea {
     cursor: pointer;
 }
 
-.form-group, .form-box {
+/* .form-group, .form-box {
     display: flex;
     flex-direction: column;
-}
+} */
+
 
 .form-group {
     position: relative;
@@ -751,6 +753,7 @@ textarea {
 }
 
 .modal-input, .modal-textarea {
+    width: 100%;
     margin: 0;
 
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -761,8 +764,8 @@ textarea {
 }
 
 .modal-input:hover,
-.modal-textarea:hover,
 .modal-input:focus,
+.modal-textarea:hover,
 .modal-textarea:focus {
     border-color: var(--accent-color);
 }
@@ -790,45 +793,23 @@ textarea {
     color: rgba(117, 117, 117, 0.5);
 }
 
-.check-label {
-
+.form-agreement {
     display: flex;
     align-items: center;
-
     margin-bottom: 30px;
-    margin-left: 12px;
-
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    cursor: pointer;
 }
 
-
-
-.form-checkbox {
-    display: flex;
-    align-items: center;
-
-    width: 16px;
-    height: 15px;
-    border: 2px solid var(--primary-text-color-dark);
-    border-radius: 3px;
-    transition: border var(--duration) var(--timing-function);
-    margin-right: 8px;
-}
-
-.modal-checked:hover+.form-checkbox,
-.modal-checked:focus+.form-checkbox {
+.modal-checked:hover,
+.modal-checked:focus {
     border: 2px solid var(--accent-color);
 }
 
-.modal-checked:checked+.form-checkbox {
+.modal-checked:checked {
     background-color: var(--accent-color);
     border: none;
 }
 
-.modal-checked:checked+.form-checkbox .icon-checked {
+.modal-checked:checked+.icon-checked {
     opacity: 1;
 }
 
@@ -837,6 +818,28 @@ textarea {
     opacity: 0;
 
 }
+
+
+
+.form-checkbox {
+
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--primary-text-color-dark);
+    border-radius: 3px;
+    transition: border var(--duration) var(--timing-function);
+    margin-left: 12px;
+}
+
+.check-label {
+    margin-left: 12px;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+}
+
+
 
 .checkbox-link {
     font-size: 14px;
