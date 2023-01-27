@@ -859,7 +859,7 @@ textarea {
 .checkbox-link {
     font-size: 14px;
     line-height: normal;
-    color: --acent-color;
+    color: --accent-color;
     border-bottom: 1px solid;
     text-decoration: none;
     cursor: pointer;
