@@ -691,15 +691,13 @@ textarea {
     background: var(--primary-text-color-light);
     border: 1px solid rgba(0, 0, 0, 0.1);
     color: var(--secondary-text-color-dark);
-    transition: color var(--duration) var(--timing-function),
-        background-color var(--duration) var(--timing-function);
+    transition: color var(--duration) var(--timing-function);
     cursor: pointer;
 }
 
 .modal-btn-close:focus,
 .modal-btn-close:hover {
-    color: var(--primary-text-color-light);
-    background-color: var(--accent-color);
+    color: var(--accent-color);
 }
 
 
@@ -749,6 +747,7 @@ textarea {
     transform: translateY(-50%);
     left: 12px;
     pointer-events: none;
+    color: var(--secondary-text-color-dark);
     transition: color var(--duration) var(--timing-function);
 }
 
@@ -763,7 +762,7 @@ textarea {
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    transition: border-color var(--duration) var(--timing-function);
+    transition: border var(--duration) var(--timing-function);
     outline: transparent;
     cursor: pointer;
 }
@@ -772,7 +771,7 @@ textarea {
 .modal-input:focus,
 .modal-textarea:hover,
 .modal-textarea:focus {
-    border-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
 }
 
 .modal-input {
@@ -803,11 +802,16 @@ textarea {
     margin-left: 12px;
 }
 
+
+
 .checkbox-link {
+
     font-size: 14px;
-    cursor: pointer;
-    text-decoration: underline;
+    line-height: normal;
     color: var(--accent-color);
+    border-bottom: 1px solid;
+
+    cursor: pointer;
 }
 
 .check-label {
@@ -818,7 +822,7 @@ textarea {
     color: var(--secondary-text-color-light);
     letter-spacing: 0.03em;
     cursor: pointer;
-    margin-right: 5px;
+
 }
 
 .form-checkbox {
@@ -851,20 +855,14 @@ textarea {
 }
 
 .checkbox-text {
+    margin-right: 5px;
     font-size: 14px;
     line-height: 1.71;
     color: var(--primary-text-color);
 
 }
 
-.checkbox-link {
-    font-size: 14px;
-    line-height: normal;
-    color: var(--accent-color);
-    border-bottom: 1px solid;
-    text-decoration: none;
-    cursor: pointer;
-}
+
 
 .modal-checked:hover+.form-checkbox,
 .modal-checked:focus+.form-checkbox {
