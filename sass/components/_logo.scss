@@ -1,0 +1,25 @@
+.logo {
+	font-family: var(--font-family-secondary);
+	font-size: 26px;
+	line-height: 1.2;
+	width: 145px;
+	transform: scale(1);
+	transition: transform var(--duration) var(--timing-function);
+}
+
+.logo:focus,
+.logo:hover {
+	transform: scale(1.03);
+}
+
+.logo--dark {
+	color: var(--color-secondary-text-dark);
+}
+
+.logo--light {
+	color: var(--color-primary-text-light);
+}
+
+.logo--accent {
+	color: var(--color-accent);
+}

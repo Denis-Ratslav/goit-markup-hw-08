@@ -1,4 +1,25 @@
-@import "utils/variables";
-@import "utils/mixins";
+@import "./utils/variables";
 
-@import "components/header";
+@import "./base/common";
+@import "./base/container";
+
+@import "./utils/visually-hidden";
+@import "./utils/mixins";
+
+@import "./components/flex-container";
+@import "./components/logo";
+@import "./components/btn";
+@import "./components/socials";
+@import "./components/section-title";
+@import "./components/subtitle";
+
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/feature";
+@import "./layout/activities";
+@import "./layout/team";
+@import "./layout/clients";
+@import "./layout/footer";
+@import "./layout/modal";
+@import "./layout/section-filter";
+@import "./layout/project-section";

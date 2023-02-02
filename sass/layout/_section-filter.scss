@@ -1,0 +1,13 @@
+.filters__list {
+	margin-bottom: 50px;
+}
+
+.filters__item:not(:last-child) {
+	margin-right: 8px;
+}
+
+.filters__btn {
+	padding: 6px 22px;
+	min-width: 73px;
+	min-height: 38px;
+}

@@ -1,0 +1,29 @@
+:root {
+	--color-accent: #2196f3;
+	--color-button-active: #188ce8;
+	--color-primary-text-dark: #212121;
+	--color-primary-text-light: #ffffff;
+	--color-secondary-text-dark: #000000;
+	--color-secondary-text-light: #757575;
+
+	--color-bg-dark: #2f303a;
+	--color-bg-light: #f5f4fa;
+	--color-bg-hero: #c4c4c4;
+	--color-bg-project-thumb: rgba(33, 150, 243, 0.9);
+	--color-bg-image-hero: rgba(47, 48, 58, 0.4);
+	--color-bg-image-activities: rgba(47, 48, 58, 0.8);
+
+	--color-border-bottom: #ececec;
+	--color-border-project: #eeeeee;
+	--color-backdrop: rgba(0, 0, 0, 0.2);
+	--color-svg: #afb1b8;
+
+	--font-family-primary: Roboto, sans-serif;
+	--font-family-secondary: Raleway, sans-serif;
+	--font-size-primary: 16px;
+
+	--gap-card-set: 30px;
+
+	--timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	--duration: 250ms;
+}

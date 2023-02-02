@@ -1,0 +1,14 @@
+.socials__list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.socials__item:not(:last-child) {
+	margin-right: 10px;
+}
+
+.socials__link {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+}

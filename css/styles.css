@@ -119,8 +119,6 @@ textarea {
     color: var(--color-accent);
 }
 
-
-
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -167,23 +165,22 @@ textarea {
 .socials__link {
     width: 44px;
     height: 44px;
-
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .btn {
+    font-size: var(--font-size-primary);
+    font-family: inherit;
+    border-radius: 4px;
+    cursor: pointer;
+    border: transparent;
+}
+
+.btn--dark {
     min-height: 50px;
     background-color: var(--color-accent);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border: transparent;
-    cursor: pointer;
     color: var(--color-primary-text-light);
-    font-family: inherit;
-    font-size: var(--font-size-primary);
     line-height: 1.85;
     font-weight: 700;
     letter-spacing: 0.06em;
@@ -191,15 +188,34 @@ textarea {
     transition: background-color var(--duration) var(--timing-function);
 }
 
-.btn:hover,
-.btn:focus {
+.btn--dark:hover,
+.btn--dark:focus {
     background-color: var(--color-button-active);
+}
+
+.btn--light {
+    color: inherit;
+    background-color: var(--color-bg-light);
+    font-weight: 500;
+    line-height: 1.63;
+    letter-spacing: 0.03em;
+    box-shadow: none;
+    transition: color var(--duration) var(--timing-function),
+        background-color var(--duration) var(--timing-function),
+        box-shadow var(--duration) var(--timing-function);
+}
+
+.btn--light:hover,
+.btn--light:focus {
+    color: var(--color-primary-text-light);
+    background-color: var(--color-accent);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* ============= END COMPONENTS ============= */
 
 /* ============= START HEADER ============= */
-
 
 .page-header {
     border-bottom: 1px solid var(--color-border-bottom);
@@ -229,7 +245,6 @@ textarea {
     display: flex;
     padding-top: 32px;
     padding-bottom: 32px;
-
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -240,10 +255,8 @@ textarea {
     color: inherit;
 }
 
-
 .contact-group__link {
     color: var(--color-secondary-text-light);
-
 }
 
 .active-link,
@@ -290,7 +303,6 @@ textarea {
     margin-left: auto;
     margin-right: auto;
     background-color: var(--color-bg-hero);
-
     background-image: linear-gradient(var(--color-bg-image-hero),
             var(--color-bg-image-hero)),
         url("../images/img-index/new_photo-hero.jpg");
@@ -301,9 +313,7 @@ textarea {
 
 .hero__title {
     margin-bottom: var(--gap-card-set);
-
     color: var(--color-primary-text-light);
-
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -322,21 +332,6 @@ textarea {
 /* ============= END HERO ============= */
 
 /* ============= start feature ============= */
-
-
-
-/* .feature__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: calc(-1 * var(--gap-card-set));
-    margin-top: calc(-1 * var(--gap-card-set));
-}
-
-.feature__item {
-    flex-basis: calc(100% / 4 - var(--gap-card-set));
-    margin-left: var(--gap-card-set);
-    margin-top: var(--gap-card-set);
-} */
 
 .feature__list {
     display: flex;
@@ -368,8 +363,6 @@ textarea {
     color: var(--color-secondary-text-light);
 }
 
-
-
 /* ============= END feature ============= */
 
 /* ============= start activities ============= */
@@ -377,19 +370,6 @@ textarea {
     padding-top: 0;
 }
 
-/* .activities__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: calc(-1 * var(--gap-card-set));
-    margin-top: calc(-1 * var(--gap-card-set));
-}
-
-.activities__item {
-    flex-basis: calc(100% / 3 - var(--gap-card-set));
-    margin-left: var(--gap-card-set);
-    margin-top: var(--gap-card-set);
-    position: relative;
-} */
 .activities__list {
     display: flex;
     flex-wrap: wrap;
@@ -409,7 +389,6 @@ textarea {
     width: 100%;
     padding-top: 27px;
     padding-bottom: 27px;
-
     color: var(--color-primary-text-light);
     background-color: var(--color-bg-image-activities);
 }
@@ -431,9 +410,7 @@ textarea {
 .team__item {
     max-width: 270px;
     margin: calc(var(--gap-card-set)/2);
-
     background-color: var(--color-primary-text-light);
-
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
@@ -465,8 +442,6 @@ textarea {
     margin-bottom: 16px;
 }
 
-
-
 .socials__link--bg-light {
     color: var(--color-svg);
     background-color: var(--color-primary-text-light);
@@ -482,6 +457,7 @@ textarea {
 
 /* ============= END team ============= */
 /* ============= start clients ============= */
+
 .clients__list {
     display: flex;
 }
@@ -491,7 +467,6 @@ textarea {
 }
 
 .clients__link {
-
     width: 170px;
     height: 92px;
     color: var(--color-svg);
@@ -508,12 +483,9 @@ textarea {
     border-color: var(--color-accent);
 }
 
-
-
 /* ============= END clients ============= */
 
 /* ============= start footer ============= */
-
 
 .page-footer {
     padding-top: 60px;
@@ -536,7 +508,6 @@ textarea {
 .address__link {
     color: var(--color-primary-text-light);
     opacity: 0.6;
-
     line-height: 1.71;
     transition: opacity var(--duration) var(--timing-function);
 }
@@ -561,7 +532,6 @@ textarea {
 
 .socials__link--bg-dark {
     background-color: rgba(255, 255, 255, 0.1);
-
     color: var(--color-primary-text-light);
     transition: background-color var(--duration) var(--timing-function);
 }
@@ -574,8 +544,6 @@ textarea {
 .page-footer__socials--append {
     margin-right: auto;
 }
-
-
 
 .sub__wrapper {
     display: flex;
@@ -607,7 +575,6 @@ textarea {
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
-
     color: rgba(255, 255, 255, 0.6);
 }
 
@@ -621,10 +588,7 @@ textarea {
     margin-left: 10px;
 }
 
-
-
 .sub__field {
-
     display: flex;
     align-items: flex-end;
 }
@@ -672,13 +636,11 @@ textarea {
 }
 
 .modal__title {
-
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
     text-align: center;
     letter-spacing: 0.03em;
-
     color: var(--color-primary-text-dark);
     margin-bottom: 12px;
 }
@@ -691,7 +653,6 @@ textarea {
     top: 8px;
     right: 8px;
     border-radius: 50%;
-
     background: var(--color-primary-text-light);
     border: 1px solid rgba(0, 0, 0, 0.1);
     color: var(--color-secondary-text-dark);
@@ -724,12 +685,10 @@ textarea {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
-
     color: var(--color-secondary-text-light);
 }
 
 .modal-form__wrapper {
-    /* display: block; */
     position: relative;
 }
 
@@ -802,8 +761,6 @@ textarea {
     cursor: pointer;
 }
 
-
-
 .terms__checkbox--custom {
     justify-content: center;
     width: 16px;
@@ -841,15 +798,12 @@ textarea {
     font-size: 14px;
     line-height: 1.71;
     color: var(--primary-text-color);
-
 }
 
 .modal-form__btn--submit {
     margin: 0 auto;
     min-width: 200px;
 }
-
-
 
 /* ============= end modal ============= */
 
@@ -867,36 +821,10 @@ textarea {
     margin-right: 8px;
 }
 
-
-
 .filters__btn {
     padding: 6px 22px;
     min-width: 73px;
     min-height: 38px;
-    background-color: var(--color-bg-light);
-
-    font-family: inherit;
-    font-weight: 500;
-    font-size: var(--font-size-primary);
-    line-height: 1.63;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: inherit;
-    border-radius: 4px;
-    border-style: none;
-    cursor: pointer;
-    box-shadow: none;
-    transition: color var(--duration) var(--timing-function),
-        background-color var(--duration) var(--timing-function),
-        box-shadow var(--duration) var(--timing-function);
-}
-
-.filters__btn:hover,
-.filters__btn:focus {
-    color: var(--color-primary-text-light);
-    background-color: var(--color-accent);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-        0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* ============= end section__filter ============= */
@@ -940,15 +868,12 @@ textarea {
     width: 100%;
     height: 100%;
     background-color: var(--color-bg-project-thumb);
-
     transform: translateY(100%);
-
     transition: transform var(--duration) var(--timing-function);
 }
 
 .projects__description {
     position: absolute;
-
     top: 50%;
     left: 0;
     width: 100%;
@@ -972,8 +897,6 @@ textarea {
 .projects__link:focus .projects__overlay {
     transform: translateY(0);
 }
-
-
 
 .projects__wrapper {
     padding: 20px 22px 20px 24px;

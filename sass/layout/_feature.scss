@@ -1,0 +1,28 @@
+.feature__list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: calc(-1 * var(--gap-card-set) / 2);
+}
+
+.feature__item {
+	max-width: 270px;
+	margin: calc(var(--gap-card-set) / 2);
+}
+
+.feature__bg-img {
+	height: 120px;
+	background-color: var(--color-bg-light);
+}
+
+.feature__bg-img--bottom {
+	margin-bottom: var(--gap-card-set);
+}
+
+.feature__title--bottom {
+	margin-bottom: 10px;
+}
+
+.feature__descr {
+	line-height: 1.71;
+	color: var(--color-secondary-text-light);
+}

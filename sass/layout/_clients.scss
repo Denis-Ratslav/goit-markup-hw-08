@@ -1,0 +1,24 @@
+.clients__list {
+	display: flex;
+}
+
+.clients__item:not(:last-child) {
+	margin-right: var(--gap-card-set);
+}
+
+.clients__link {
+	width: 170px;
+	height: 92px;
+	color: var(--color-svg);
+	border: 1px solid;
+	border-color: var(--color-svg);
+	border-radius: 4px;
+	transition: color var(--duration) var(--timing-function),
+		border-color var(--duration) var(--timing-function);
+}
+
+.clients__link:hover,
+.clients__link:focus {
+	color: var(--color-accent);
+	border-color: var(--color-accent);
+}
