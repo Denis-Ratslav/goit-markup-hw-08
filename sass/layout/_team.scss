@@ -26,10 +26,10 @@
 	font-size: var(--font-size-primary);
 	line-height: 1.19;
 	text-align: center;
-}
 
-.team__name--bottom {
-	margin-bottom: 10px;
+	&--bottom {
+		margin-bottom: 10px;
+	}
 }
 
 .team__position {
@@ -37,21 +37,20 @@
 	font-size: var(--font-size-primary);
 	line-height: 1.19;
 	text-align: center;
-}
 
-.team__position--bottom {
-	margin-bottom: 16px;
+	&--bottom {
+		margin-bottom: 16px;
+	}
 }
-
 .socials__link--bg-light {
 	color: var(--color-svg);
 	background-color: var(--color-primary-text-light);
 	transition: background-color var(--duration) var(--timing-function),
 		color var(--duration) var(--timing-function);
-}
 
-.socials__link--bg-light:hover,
-.socials__link--bg-light:focus {
-	color: var(--color-primary-text-light);
-	background-color: var(--color-accent);
+	&:hover,
+	&:focus {
+		color: var(--color-primary-text-light);
+		background-color: var(--color-accent);
+	}
 }

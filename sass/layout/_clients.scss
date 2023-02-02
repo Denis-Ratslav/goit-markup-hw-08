@@ -15,10 +15,10 @@
 	border-radius: 4px;
 	transition: color var(--duration) var(--timing-function),
 		border-color var(--duration) var(--timing-function);
-}
 
-.clients__link:hover,
-.clients__link:focus {
-	color: var(--color-accent);
-	border-color: var(--color-accent);
+	&:hover,
+	&:focus {
+		color: var(--color-accent);
+		border-color: var(--color-accent);
+	}
 }

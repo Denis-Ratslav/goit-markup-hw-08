@@ -5,21 +5,21 @@
 	width: 145px;
 	transform: scale(1);
 	transition: transform var(--duration) var(--timing-function);
-}
 
-.logo:focus,
-.logo:hover {
-	transform: scale(1.03);
-}
+	&:focus,
+	&:hover {
+		transform: scale(1.03);
+	}
 
-.logo--dark {
-	color: var(--color-secondary-text-dark);
-}
+	&--dark {
+		color: var(--color-secondary-text-dark);
+	}
 
-.logo--light {
-	color: var(--color-primary-text-light);
-}
+	&--light {
+		color: var(--color-primary-text-light);
+	}
 
-.logo--accent {
-	color: var(--color-accent);
+	&--accent {
+		color: var(--color-accent);
+	}
 }

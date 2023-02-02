@@ -14,19 +14,18 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-}
 
-.hero__title {
-	margin-bottom: var(--gap-card-set);
-	color: var(--color-primary-text-light);
-	font-weight: 900;
-	font-size: 44px;
-	line-height: 1.36;
-	text-align: center;
-	letter-spacing: 0.06em;
-	text-transform: uppercase;
+	&__title {
+		margin-bottom: var(--gap-card-set);
+		color: var(--color-primary-text-light);
+		font-weight: 900;
+		font-size: 44px;
+		line-height: 1.36;
+		text-align: center;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+	}
 }
-
 .modal-btn {
 	padding: 10px 30px;
 	margin-left: auto;

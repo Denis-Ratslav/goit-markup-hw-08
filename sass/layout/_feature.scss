@@ -12,12 +12,11 @@
 .feature__bg-img {
 	height: 120px;
 	background-color: var(--color-bg-light);
-}
 
-.feature__bg-img--bottom {
-	margin-bottom: var(--gap-card-set);
+	&--bottom {
+		margin-bottom: var(--gap-card-set);
+	}
 }
-
 .feature__title--bottom {
 	margin-bottom: 10px;
 }

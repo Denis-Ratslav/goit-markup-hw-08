@@ -14,12 +14,12 @@
 	display: block;
 	box-shadow: none;
 	transition: box-shadow var(--duration) var(--timing-function);
-}
 
-.projects__link:hover,
-.projects__link:focus {
-	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-		1px 4px 6px rgba(0, 0, 0, 0.16);
+	&:hover,
+	&:focus {
+		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+			1px 4px 6px rgba(0, 0, 0, 0.16);
+	}
 }
 
 .projects__thumb {
@@ -37,6 +37,11 @@
 	background-color: var(--color-bg-project-thumb);
 	transform: translateY(100%);
 	transition: transform var(--duration) var(--timing-function);
+
+	.projects__link:hover &,
+	.projects__link:focus & {
+		transform: translateY(0);
+	}
 }
 
 .projects__description {
@@ -53,16 +58,11 @@
 	color: var(--color-primary-text-light);
 	opacity: 0;
 	transition: opacity var(--duration) var(--timing-function) 250ms;
-}
 
-.projects__link:hover .projects__description,
-.projects__link:focus .projects__description {
-	opacity: 1;
-}
-
-.projects__link:hover .projects__overlay,
-.projects__link:focus .projects__overlay {
-	transform: translateY(0);
+	.projects__link:hover &,
+	.projects__link:focus & {
+		opacity: 1;
+	}
 }
 
 .projects__wrapper {
