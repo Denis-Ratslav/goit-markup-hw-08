@@ -240,9 +240,6 @@ textarea {
 
 .contact-group__link,
 .nav-list__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
@@ -253,6 +250,9 @@ textarea {
 }
 
 .nav-list__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   color: inherit;
 }
 .nav-list__link:hover, .nav-list__link:focus {
