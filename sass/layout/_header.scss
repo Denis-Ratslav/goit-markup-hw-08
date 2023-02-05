@@ -1,12 +1,12 @@
 .page-header {
-	border-bottom: 1px solid var(--color-border-bottom);
 	position: fixed;
-	width: 100%;
 	top: 0;
 	left: 0;
-	background-color: var(--color-primary-text-light);
 	z-index: 3;
+	width: 100%;
 	min-height: 80px;
+	border-bottom: 1px solid var(--color-border-bottom);
+	background-color: var(--color-primary-text-light);
 }
 
 .logo--append {

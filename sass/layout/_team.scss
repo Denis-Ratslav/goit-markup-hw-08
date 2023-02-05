@@ -33,11 +33,11 @@
 }
 
 .team__position {
-	color: var(--color-secondary-text-light);
 	font-size: var(--font-size-primary);
 	line-height: 1.19;
 	text-align: center;
-
+	color: var(--color-secondary-text-light);
+	
 	&--bottom {
 		margin-bottom: 16px;
 	}

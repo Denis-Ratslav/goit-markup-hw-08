@@ -19,9 +19,9 @@
 }
 
 .address__link {
+	line-height: 1.71;
 	color: var(--color-primary-text-light);
 	opacity: 0.6;
-	line-height: 1.71;
 	transition: opacity var(--duration) var(--timing-function);
 
 	&:hover,
@@ -40,8 +40,8 @@
 }
 
 .socials__link--bg-dark {
-	background-color: rgba(255, 255, 255, 0.1);
 	color: var(--color-primary-text-light);
+	background-color: rgba(255, 255, 255, 0.1);
 	transition: background-color var(--duration) var(--timing-function);
 
 	&:hover,
@@ -59,10 +59,10 @@
 }
 
 .sub__input {
-	margin: 0;
-	padding-left: 16px;
 	width: 358px;
 	height: 50px;
+	margin: 0;
+	padding-left: 16px;
 	color: var(--color-primary-text-light);
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -79,7 +79,7 @@
 
 	&::placeholder {
 		font-weight: 400;
-		font-size: 16px;
+		font-size: var(--font-size-primary);
 		line-height: 1.25;
 		letter-spacing: 0.03em;
 		color: rgba(255, 255, 255, 0.6);

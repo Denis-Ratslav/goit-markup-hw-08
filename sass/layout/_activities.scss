@@ -8,10 +8,10 @@
 	}
 
 	&__item {
+		position: relative;
 		max-width: 370px;
 		margin: calc(var(--gap-card-set) / 2);
-		position: relative;
-	}
+			}
 
 	&__subtitle {
 		position: absolute;
