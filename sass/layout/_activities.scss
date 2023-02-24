@@ -4,14 +4,18 @@
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
-		margin: calc(-1 * var(--gap-card-set) / 2);
+		@media screen and (min-width: $desktop) {
+			margin: calc(-1 * var(--gap-card-set) / 2);
+		}
 	}
 
 	&__item {
 		position: relative;
 		max-width: 370px;
-		margin: calc(var(--gap-card-set) / 2);
-			}
+		@media screen and (min-width: $desktop) {
+			margin: calc(var(--gap-card-set) / 2);
+		}
+	}
 
 	&__subtitle {
 		position: absolute;

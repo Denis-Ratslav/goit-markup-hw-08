@@ -1,12 +1,16 @@
 .feature__list {
 	display: flex;
 	flex-wrap: wrap;
-	margin: calc(-1 * var(--gap-card-set) / 2);
+	@media screen and (min-width: $desktop) {
+		margin: calc(-1 * var(--gap-card-set) / 2);
+	}
 }
 
 .feature__item {
 	max-width: 270px;
-	margin: calc(var(--gap-card-set) / 2);
+	@media screen and (min-width: $desktop) {
+		margin: calc(var(--gap-card-set) / 2);
+	}
 }
 
 .feature__bg-img {
