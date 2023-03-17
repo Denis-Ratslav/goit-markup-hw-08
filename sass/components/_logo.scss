@@ -1,11 +1,14 @@
 .logo {
-	width: 145px;
-	font-size: 26px;
+	font-size: 24px;
 	font-family: var(--font-family-secondary);
-	line-height: 1.2;
+	line-height: 1.17;
 	transform: scale(1);
 	transition: transform var(--duration) var(--timing-function);
-
+	@media screen and (min-width: $desktop) {
+		width: 145px;
+		font-size: 26px;
+		line-height: 1.2;
+	}
 	&:focus,
 	&:hover {
 		transform: scale(1.03);
