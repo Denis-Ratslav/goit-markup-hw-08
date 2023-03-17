@@ -1,34 +1,90 @@
 .hero {
-	max-width: 1600px;
-	height: 600px;
+	max-width: $mobile;
+	max-height: 400px;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 200px;
-	padding-bottom: 200px;
+	padding-top: 118px;
+	padding-bottom: 118px;
 	background-color: var(--color-bg-hero);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 	background-image: linear-gradient(
 			var(--color-bg-image-hero),
 			var(--color-bg-image-hero)
 		),
-		url("../images/img-index/new_photo-hero.jpg");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+		url("../images/new_photo-hero-480.jpg");
+	@media (min-device-pixel-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution: 2dppx) {
+		background-image: linear-gradient(
+				var(--color-bg-image-hero),
+				var(--color-bg-image-hero)
+			),
+			url("../images/new_photo-hero-480@2x.jpg");
+	}
+
+	@media screen and (min-width: $tablet) {
+		max-width: $tablet;
+		background-size: contain;
+		background-image: linear-gradient(
+				var(--color-bg-image-hero),
+				var(--color-bg-image-hero)
+			),
+			url("../images/new_photo-hero-768.jpg");
+		@media (min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background-image: linear-gradient(
+					var(--color-bg-image-hero),
+					var(--color-bg-image-hero)
+				),
+				url("../images/new_photo-hero-768@2x.jpg");
+		}
+	}
+	@media screen and (min-width: $desktop) {
+		max-width: 1600px;
+		max-height: 600px;
+		background-size: cover;
+		padding-top: 200px;
+		padding-bottom: 200px;
+		background-image: linear-gradient(
+				var(--color-bg-image-hero),
+				var(--color-bg-image-hero)
+			),
+			url("../images/new_photo-hero-1600.jpg");
+		@media (min-device-pixel-ratio: 2),
+			(min-resolution: 192dpi),
+			(min-resolution: 2dppx) {
+			background-image: linear-gradient(
+					var(--color-bg-image-hero),
+					var(--color-bg-image-hero)
+				),
+				url("../images/new_photo-hero-1600@2x.jpg");
+		}
+	}
 
 	&__title {
 		margin-bottom: var(--gap-card-set);
-		font-size: 44px;
+		font-size: 26px;
 		font-weight: 900;
-		line-height: 1.36;
+		line-height: 1.62;
 		text-align: center;
 		letter-spacing: 0.06em;
 		text-transform: uppercase;
 		color: var(--color-primary-text-light);
+		@media screen and (min-width: $desktop) {
+			font-size: 44px;
+			line-height: 1.36;
+		}
 	}
 }
 .modal-btn {
-	min-width: 216px;
+	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 10px 30px;
+	padding: 10px 24px;
+	@media screen and (min-width: $desktop) {
+		padding: 10px 32px;
+	}
 }
