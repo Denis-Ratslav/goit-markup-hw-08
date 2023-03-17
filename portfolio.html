@@ -26,64 +26,105 @@
 		<!-- Верхня лінія (навигация) -->
 		<header class="page-header">
 			<div class="container flex-container">
-				<nav class="page-nav flex-container">
-					<a
-						class="logo logo--dark flex-container link logo--append"
-						href="./index.html"
-						lang="en"
-					>
-						<span class="logo--accent">Web</span>
-						Studio
-					</a>
-					<ul class="nav-list flex-container list">
-						<li class="nav-list__item">
-							<a class="nav-list__link link" href="./index.html">Студія</a>
-						</li>
-						<li class="nav-list__item">
-							<a
-								class="nav-list__link active-link link"
-								href="./portfolio.html"
-							>
-								Портфоліо
-							</a>
-						</li>
-						<li class="nav-list__item">
-							<a class="nav-list__link link" href="#contacts">Контакти</a>
-						</li>
-					</ul>
-				</nav>
-				<ul class="contact-group flex-container list">
-					<li class="contact-group__item">
-						<a
-							class="contact-group__link link flex-container"
-							href="mailto:info@devstudio.com"
-						>
-							<svg
-								class="contact-group__icon--append icon"
-								width="16"
-								height="12"
-							>
-								<use href="./images/img-index/icons.svg#icon-envelope"></use>
-							</svg>
-							<p>info@devstudio.com</p>
-						</a>
-					</li>
-					<li class="contact-group__item">
-						<a
-							class="contact-group__link link flex-container"
-							href="tel:+380961111111"
-						>
-							<svg
-								class="contact-group__icon--append icon"
-								width="10"
-								height="16"
-							>
-								<use href="./images/img-index/icons.svg#icon-smartphone"></use>
-							</svg>
-							<p>+38 096 111 11 11</p>
-						</a>
-					</li>
-				</ul>
+				<a
+					class="logo logo--dark flex-container link logo--append"
+					href="./index.html"
+					lang="en"
+				>
+					<span class="logo--accent">Web</span>
+					Studio
+				</a>
+				<button
+					type="button"
+					class="page-header__menu"
+					aria-expanded="false"
+					aria-controls="menu-nav"
+					data-menu-button
+				>
+					<svg width="40" height="40" aria-label="Перемикач мобільного меню">
+						<use
+							class="icon-cross icon"
+							href="./images/img-index/icons.svg#icon-cross"
+						></use>
+						<use
+							class="icon-menu icon"
+							href="./images/img-index/icons.svg#icon-menu"
+						></use>
+					</svg>
+				</button>
+				<div class="menu-nav" id="menu-nav" data-menu>
+					<nav class="page-nav">
+						<ul class="nav-list list">
+							<li class="nav-list__item">
+								<a class="nav-list__link link" href="./index.html">Студія</a>
+							</li>
+							<li class="nav-list__item">
+								<a
+									class="nav-list__link active-link link"
+									href="./portfolio.html"
+								>
+									Портфоліо
+								</a>
+							</li>
+							<li class="nav-list__item">
+								<a class="nav-list__link link" href="#contacts">Контакти</a>
+							</li>
+						</ul>
+					</nav>
+
+					<div class="contacts__wrapper">
+						<ul class="contact-group list">
+							<li class="contact-group__item">
+								<a
+									class="contact-group__link mail link flex-container"
+									href="mailto:info@devstudio.com"
+								>
+									<svg
+										class="contact-group__icon--append icon"
+										width="16"
+										height="12"
+									>
+										<use
+											href="./images/img-index/icons.svg#icon-envelope"
+										></use>
+									</svg>
+									<p>info@devstudio.com</p>
+								</a>
+							</li>
+							<li class="contact-group__item tel">
+								<a
+									class="contact-group__link tel link flex-container"
+									href="tel:+380961111111"
+								>
+									<svg
+										class="contact-group__icon--append icon"
+										width="10"
+										height="16"
+									>
+										<use
+											href="./images/img-index/icons.svg#icon-smartphone"
+										></use>
+									</svg>
+									<p>+38 096 111 11 11</p>
+								</a>
+							</li>
+						</ul>
+						<ul class="social-group list">
+							<li class="social-group__item">
+								<a class="social-group__link link" href="">Instagram</a>
+							</li>
+							<li class="social-group__item">
+								<a class="social-group__link link" href="">Twitter</a>
+							</li>
+							<li class="social-group__item">
+								<a class="social-group__link link" href="">Facebook</a>
+							</li>
+							<li class="social-group__item">
+								<a class="social-group__link link" href="">LinkedIn</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</header>
 		<!-- Унікальний контент -->
@@ -92,57 +133,111 @@
 			<section class="section__filter section__inner">
 				<div class="filters container">
 					<h1 class="visually-hidden">Приклади проєктів</h1>
-					<ul class="filters__list list flex-container">
-						<li class="filters__item">
-							<button
-								class="filters__btn btn btn--light flex-container"
-								type="button"
-							>
-								Усі
-							</button>
-						</li>
-						<li class="filters__item">
-							<button
-								class="filters__btn btn btn--light flex-container"
-								type="button"
-							>
-								Веб-сайти
-							</button>
-						</li>
-						<li class="filters__item">
-							<button
-								class="filters__btn btn btn--light flex-container"
-								type="button"
-							>
-								Додатки
-							</button>
-						</li>
-						<li class="filters__item">
-							<button
-								class="filters__btn btn btn--light flex-container"
-								type="button"
-							>
-								Дизайн
-							</button>
-						</li>
-						<li class="filters__item">
-							<button
-								class="filters__btn btn btn--light flex-container"
-								type="button"
-							>
-								Маркетинг
-							</button>
-						</li>
-					</ul>
+					<div class="filters__wrap">
+						<ul class="filters__list list flex-container">
+							<li class="filters__item">
+								<button
+									class="filters__btn btn btn--light flex-container"
+									type="button"
+								>
+									Усі
+								</button>
+							</li>
+							<li class="filters__item">
+								<button
+									class="filters__btn btn btn--light flex-container"
+									type="button"
+								>
+									Веб-сайти
+								</button>
+							</li>
+							<li class="filters__item">
+								<button
+									class="filters__btn btn btn--light flex-container"
+									type="button"
+								>
+									Додатки
+								</button>
+							</li>
+							<li class="filters__item">
+								<button
+									class="filters__btn btn btn--light flex-container"
+									type="button"
+								>
+									Дизайн
+								</button>
+							</li>
+							<li class="filters__item">
+								<button
+									class="filters__btn btn btn--light flex-container"
+									type="button"
+								>
+									Маркетинг
+								</button>
+							</li>
+						</ul>
+					</div>
 					<!-- Проєкти -->
 					<ul class="projects__list list">
 						<li class="projects__item">
 							<a class="projects__link link" href="">
 								<div class="projects__thumb">
-									<img
-										src="./images/img-portfolio/img-technocrack.jpg"
-										alt="Технокряк"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/img-technocrack-370.webp    1x,
+												./images/img-technocrack-370@2x.webp 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-technocrack-370.jpg    1x,
+												./images/img-technocrack-370@2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+										<source
+											srcset="
+												./images/img-technocrack-354.webp    1x,
+												./images/img-technocrack-354@2x.webp 2x
+											"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-technocrack-354.jpg    1x,
+												./images/img-technocrack-354@2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+											type="image/jpeg"
+										/>
+										<source
+											srcset="
+												./images/img-technocrack-450.webp    1x,
+												./images/img-technocrack-450@2x.webp 2x
+											"
+											media="(min-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-technocrack-450.jpg    1x,
+												./images/img-technocrack-450@2x.jpg 2x
+											"
+											media="(max-width: 767px)"
+											type="image/jpeg"
+										/>
+
+										<img
+											src="./images/img-technocrack-354.jpg"
+											alt="Технокряк"
+										/>
+									</picture>
+
 									<div class="projects__overlay">
 										<p class="projects__description">
 											Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -161,10 +256,62 @@
 						<li class="projects__item">
 							<a class="projects__link link" href="">
 								<div class="projects__thumb">
-									<img
-										src="./images/img-portfolio/img-poster.jpg"
-										alt="Постер New Orlean vs Golden Star"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/img-poster-370.webp    1x,
+												./images/img-poster-370@2x.webp 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-poster-370.jpg    1x,
+												./images/img-poster-370@2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+										<source
+											srcset="
+												./images/img-poster-354.webp    1x,
+												./images/img-poster-354@2x.webp 2x
+											"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-poster-354.jpg    1x,
+												./images/img-poster-354@2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+											type="image/jpeg"
+										/>
+										<source
+											srcset="
+												./images/img-poster-450.webp    1x,
+												./images/img-poster-450@2x.webp 2x
+											"
+											media="(min-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-poster-450.jpg    1x,
+												./images/img-poster-450@2x.jpg 2x
+											"
+											media="(max-width: 767px)"
+											type="image/jpeg"
+										/>
+
+										<img
+											src="./images/img-poster-354.jpg"
+											alt="Постер New Orlean vs Golden Star"
+										/>
+									</picture>
+
 									<div class="projects__overlay">
 										<p class="projects__description">
 											Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -187,10 +334,62 @@
 						<li class="projects__item">
 							<a class="projects__link link" href="">
 								<div class="projects__thumb">
-									<img
-										src="./images/img-portfolio/img-seafood.jpg"
-										alt="Ресторан Seafood"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/img-seafood-370.webp    1x,
+												./images/img-seafood-370@2x.webp 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-seafood-370.jpg    1x,
+												./images/img-seafood-370@2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+										<source
+											srcset="
+												./images/img-seafood-354.webp    1x,
+												./images/img-seafood-354@2x.webp 2x
+											"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-seafood-354.jpg    1x,
+												./images/img-seafood-354@2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+											type="image/jpeg"
+										/>
+										<source
+											srcset="
+												./images/img-seafood-450.webp    1x,
+												./images/img-seafood-450@2x.webp 2x
+											"
+											media="(min-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-seafood-450.jpg    1x,
+												./images/img-seafood-450@2x.jpg 2x
+											"
+											media="(max-width: 767px)"
+											type="image/jpeg"
+										/>
+
+										<img
+											src="./images/img-seafood-354.jpg"
+											alt="Ресторан Seafood"
+										/>
+									</picture>
+
 									<div class="projects__overlay">
 										<p class="projects__description">
 											Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -213,10 +412,59 @@
 						<li class="projects__item">
 							<a class="projects__link link" href="">
 								<div class="projects__thumb">
-									<img
-										src="./images/img-portfolio/img-prime.jpg"
-										alt="Проєкт Prime"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/img-prime-370.webp    1x,
+												./images/img-prime-370@2x.webp 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-prime-370.jpg    1x,
+												./images/img-prime-370@2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+										<source
+											srcset="
+												./images/img-prime-354.webp    1x,
+												./images/img-prime-354@2x.webp 2x
+											"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-prime-354.jpg    1x,
+												./images/img-prime-354@2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+											type="image/jpeg"
+										/>
+										<source
+											srcset="
+												./images/img-prime-450.webp    1x,
+												./images/img-prime-450@2x.webp 2x
+											"
+											media="(min-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-prime-450.jpg    1x,
+												./images/img-prime-450@2x.jpg 2x
+											"
+											media="(max-width: 767px)"
+											type="image/jpeg"
+										/>
+
+										<img src="./images/img-prime-354.jpg" alt="Проєкт Prime" />
+									</picture>
+
 									<div class="projects__overlay">
 										<p class="projects__description">
 											Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -239,10 +487,59 @@
 						<li class="projects__item">
 							<a class="projects__link link" href="">
 								<div class="projects__thumb">
-									<img
-										src="./images/img-portfolio/img-boxes.jpg"
-										alt="Проєкт Boxes"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/img-boxes-370.webp    1x,
+												./images/img-boxes-370@2x.webp 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-boxes-370.jpg    1x,
+												./images/img-boxes-370@2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+										<source
+											srcset="
+												./images/img-boxes-354.webp    1x,
+												./images/img-boxes-354@2x.webp 2x
+											"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-boxes-354.jpg    1x,
+												./images/img-boxes-354@2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+											type="image/jpeg"
+										/>
+										<source
+											srcset="
+												./images/img-boxes-450.webp    1x,
+												./images/img-boxes-450@2x.webp 2x
+											"
+											media="(min-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-boxes-450.jpg    1x,
+												./images/img-boxes-450@2x.jpg 2x
+											"
+											media="(max-width: 767px)"
+											type="image/jpeg"
+										/>
+
+										<img src="./images/img-boxes-354.jpg" alt="Проєкт Boxes" />
+									</picture>
+
 									<div class="projects__overlay">
 										<p class="projects__description">
 											Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -265,10 +562,62 @@
 						<li class="projects__item">
 							<a class="projects__link link" href="">
 								<div class="projects__thumb">
-									<img
-										src="./images/img-portfolio/img-inspiration.jpg"
-										alt="Inspiration has no Borders"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/img-inspiration-370.webp    1x,
+												./images/img-inspiration-370@2x.webp 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-inspiration-370.jpg    1x,
+												./images/img-inspiration-370@2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+										<source
+											srcset="
+												./images/img-inspiration-354.webp    1x,
+												./images/img-inspiration-354@2x.webp 2x
+											"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-inspiration-354.jpg    1x,
+												./images/img-inspiration-354@2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+											type="image/jpeg"
+										/>
+										<source
+											srcset="
+												./images/img-inspiration-450.webp    1x,
+												./images/img-inspiration-450@2x.webp 2x
+											"
+											media="(min-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-inspiration-450.jpg    1x,
+												./images/img-inspiration-450@2x.jpg 2x
+											"
+											media="(max-width: 767px)"
+											type="image/jpeg"
+										/>
+
+										<img
+											src="./images/img-inspiration-354.jpg"
+											alt="Inspiration has no Borders"
+										/>
+									</picture>
+
 									<div class="projects__overlay">
 										<p class="projects__description">
 											Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -290,10 +639,62 @@
 						<li class="projects__item">
 							<a class="projects__link link" href="">
 								<div class="projects__thumb">
-									<img
-										src="./images/img-portfolio/img-edition.jpg"
-										alt="Видання Limited Edition"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/img-edition-370.webp    1x,
+												./images/img-edition-370@2x.webp 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-edition-370.jpg    1x,
+												./images/img-edition-370@2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+										<source
+											srcset="
+												./images/img-edition-354.webp    1x,
+												./images/img-edition-354@2x.webp 2x
+											"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-edition-354.jpg    1x,
+												./images/img-edition-354@2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+											type="image/jpeg"
+										/>
+										<source
+											srcset="
+												./images/img-edition-450.webp    1x,
+												./images/img-edition-450@2x.webp 2x
+											"
+											media="(min-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-edition-450.jpg    1x,
+												./images/img-edition-450@2x.jpg 2x
+											"
+											media="(max-width: 767px)"
+											type="image/jpeg"
+										/>
+
+										<img
+											src="./images/img-edition-354.jpg"
+											alt="Видання Limited Edition"
+										/>
+									</picture>
+
 									<div class="projects__overlay">
 										<p class="projects__description">
 											Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -316,10 +717,59 @@
 						<li class="projects__item">
 							<a class="projects__link link" href="">
 								<div class="projects__thumb">
-									<img
-										src="./images/img-portfolio/img-lab.jpg"
-										alt="Проєкт LAB"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/img-lab-370.webp    1x,
+												./images/img-lab-370@2x.webp 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-lab-370.jpg    1x,
+												./images/img-lab-370@2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+										<source
+											srcset="
+												./images/img-lab-354.webp    1x,
+												./images/img-lab-354@2x.webp 2x
+											"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-lab-354.jpg    1x,
+												./images/img-lab-354@2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+											type="image/jpeg"
+										/>
+										<source
+											srcset="
+												./images/img-lab-450.webp    1x,
+												./images/img-lab-450@2x.webp 2x
+											"
+											media="(min-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-lab-450.jpg    1x,
+												./images/img-lab-450@2x.jpg 2x
+											"
+											media="(max-width: 767px)"
+											type="image/jpeg"
+										/>
+
+										<img src="./images/img-lab-354.jpg" alt="Проєкт LAB" />
+									</picture>
+
 									<div class="projects__overlay">
 										<p class="projects__description">
 											Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -342,10 +792,62 @@
 						<li class="projects__item">
 							<a class="projects__link link" href="">
 								<div class="projects__thumb">
-									<img
-										src="./images/img-portfolio/img-growing.jpg"
-										alt="Growing Business"
-									/>
+									<picture>
+										<source
+											srcset="
+												./images/img-growing-370.webp    1x,
+												./images/img-growing-370@2x.webp 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-growing-370.jpg    1x,
+												./images/img-growing-370@2x.jpg 2x
+											"
+											media="(min-width: 1200px)"
+											type="image/jpeg"
+										/>
+										<source
+											srcset="
+												./images/img-growing-354.webp    1x,
+												./images/img-growing-354@2x.webp 2x
+											"
+											media="(min-width: 768px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-growing-354.jpg    1x,
+												./images/img-growing-354@2x.jpg 2x
+											"
+											media="(min-width: 768px)"
+											type="image/jpeg"
+										/>
+										<source
+											srcset="
+												./images/img-growing-450.webp    1x,
+												./images/img-growing-450@2x.webp 2x
+											"
+											media="(min-width: 767px)"
+											type="image/webp"
+										/>
+										<source
+											srcset="
+												./images/img-growing-450.jpg    1x,
+												./images/img-growing-450@2x.jpg 2x
+											"
+											media="(max-width: 767px)"
+											type="image/jpeg"
+										/>
+
+										<img
+											src="./images/img-growing-354.jpg"
+											alt="Growing Business"
+										/>
+									</picture>
+
 									<div class="projects__overlay">
 										<p class="projects__description">
 											Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -370,7 +872,7 @@
 		</main>
 		<!-- Підвал -->
 		<footer id="contacts" class="page-footer">
-			<div class="container flex-container page-footer__container--baseline">
+			<div class="container page-footer__container--baseline">
 				<div class="page-footer__address--append">
 					<a
 						class="flex-container logo page-footer__logo--bottom logo--light link"
@@ -381,7 +883,7 @@
 						Studio
 					</a>
 
-					<address class="address__wrapper">
+					<address class="address__wrapper--append">
 						<ul class="address__list list">
 							<li class="address__item">
 								<a
@@ -478,6 +980,8 @@
 				</form>
 			</div>
 		</footer>
+
+		<!-- script -->
 		<script>
 			const { height: pageHeaderHeight } = document
 				.querySelector(".page-header")
@@ -485,6 +989,7 @@
 
 			document.body.style.paddingTop = `${pageHeaderHeight}px`;
 		</script>
-		<!-- <script src="./js/modal.js"></script> -->
+		<script src="./js/modal.js"></script>
+		<script src="./js/mobile-menu.js"></script>
 	</body>
 </html>

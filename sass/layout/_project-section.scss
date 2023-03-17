@@ -1,15 +1,27 @@
 .projects__list {
-	display: flex;
-	flex-wrap: wrap;
-	@media screen and (min-width: $desktop) {
-	margin: calc(-1 * var(--gap-card-set) / 2);}
+	@media screen and (min-width: $tablet) {
+		display: flex;
+		flex-wrap: wrap;
+		margin: calc(-1 * var(--gap-card-set) / 2);
+	}
 }
 
 .projects__item {
 	position: relative;
-	max-width: 370px;
+	max-width: 450px;
+
+	@media screen and (max-width: calc($tablet - 1px)) {
+		&:not(:last-child) {
+			margin-bottom: var(--gap-card-set);
+		}
+	}
+	@media screen and (min-width: $tablet) {
+		flex-basis: calc((100% - 2 * (var(--gap-card-set))) / 2);
+		margin: calc(var(--gap-card-set) / 2);
+	}
 	@media screen and (min-width: $desktop) {
-	margin: calc(var(--gap-card-set) / 2);}
+		flex-basis: calc((100% - 3 * (var(--gap-card-set))) / 3);
+	}
 }
 
 .projects__link {

@@ -1,6 +1,9 @@
 .socials__list {
 	display: flex;
 	justify-content: space-between;
+	margin-left: auto;
+	margin-right: auto;
+	width: 206px;
 }
 
 .socials__item:not(:last-child) {
