@@ -5,9 +5,11 @@
 	z-index: 4;
 	width: 100vw;
 	height: 100vh;
+	padding: 93px 15px;
 	background-color: var(--color-backdrop);
 	opacity: 1;
 	visibility: visible;
+	overflow-y: scroll;
 	transition: opacity var(--duration) var(--timing-function),
 		visibility var(--duration) var(--timing-function);
 
@@ -19,35 +21,18 @@
 }
 
 .modal {
-	@media screen and (min-width: $desktop) {
-		min-width: 528px;
-		min-height: 581px;
-	}
-	position: absolute;
-	top: 50%;
-	left: 50%;
-
+	position: relative;
 	padding: 40px;
 	background-color: var(--color-primary-text-light);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
 		0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
-	transform: translate(-50%, -50%) scale(1);
-	transition: transform var(--duration) var(--timing-function);
+	opacity: 1;
+	transition: opacity var(--duration) var(--timing-function);
 
 	.backdrop.is-hidden & {
-		transform: translate(-50%, -150%) scale(0.7);
+		opacity: 0;
 	}
-}
-
-.modal__title {
-	margin-bottom: 12px;
-	font-size: 20px;
-	font-weight: 700;
-	line-height: 1.15;
-	text-align: center;
-	letter-spacing: 0.03em;
-	color: var(--color-primary-text-dark);
 }
 
 .modal__btn--close {
@@ -69,6 +54,17 @@
 		color: var(--color-accent);
 	}
 }
+
+.modal__title {
+	margin-bottom: 12px;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 1.15;
+	text-align: center;
+	letter-spacing: 0.03em;
+	color: var(--color-primary-text-dark);
+}
+
 .modal-form__label {
 	display: block;
 	cursor: pointer;
@@ -76,10 +72,6 @@
 
 .modal-form__label--bottom {
 	margin-bottom: 10px;
-}
-
-.modal-form__textarea--bottom {
-	margin-bottom: 20px;
 }
 
 .modal-form__caption {
@@ -90,6 +82,10 @@
 	line-height: 1.17;
 	letter-spacing: 0.01em;
 	color: var(--color-secondary-text-light);
+}
+
+.modal-form__textarea--bottom {
+	margin-bottom: 20px;
 }
 
 .modal-form__wrapper {
@@ -114,6 +110,7 @@
 		padding: 11px 12px 11px 42px;
 	}
 }
+
 .modal-form__textarea--padding {
 	min-height: 120px;
 	padding: 12px 16px;
@@ -121,7 +118,7 @@
 
 .modal-form__textarea::placeholder {
 	font-weight: 400;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 1.17;
 	letter-spacing: 0.01em;
 	color: rgba(117, 117, 117, 0.5);
@@ -143,24 +140,28 @@
 }
 
 .modal-form__terms {
-	justify-content: start;
 	margin-bottom: var(--gap-card-set);
-	margin-left: 12px;
 }
 
 .terms__label {
-	font-size: 14px;
+	flex-wrap: wrap;
+	font-size: 12px;
 	line-height: 1.71;
 	letter-spacing: 0.03em;
 	color: var(--color-secondary-text-light);
 	cursor: pointer;
 }
 
+.terms__text {
+	margin-right: 5px;
+}
+
 .terms__linkt {
-	font-size: 14px;
+	font-size: 12px;
 	line-height: normal;
 	color: var(--color-accent);
-	border-bottom: 1px solid;
+	// border-bottom: 1px solid;
+	text-decoration-line: underline;
 	cursor: pointer;
 }
 
@@ -197,14 +198,53 @@
 	}
 }
 
-.terms__text {
-	margin-right: 5px;
-	font-size: 14px;
-	line-height: 1.71;
-	color: var(--primary-text-color);
-}
-
 .modal-form__btn--submit {
 	margin: 0 auto;
 	min-width: 200px;
+}
+
+// -----------------media-------------------------
+
+@media screen and (min-width: $mobile) and (max-width: calc($tablet - 1px)) {
+	.modal {
+		width: 450px;
+	}
+}
+
+@media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+	.backdrop {
+		padding-top: 208px;
+	}
+	.modal {
+		width: 450px;
+	}
+}
+
+@media screen and (max-width: calc($desktop - 1px)) {
+	.modal {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media screen and (min-width: $desktop) {
+	.modal {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 528px;
+		min-height: 581px;
+	}
+
+	.modal-form__textarea::placeholder {
+		font-size: 12px;
+	}
+
+	.terms__label {
+		font-size: 14px;
+	}
+	.terms__linkt {
+		font-size: 14px;
+	}
 }
