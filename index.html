@@ -19,70 +19,111 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
-		
+
 		<link rel="stylesheet" href="./css/main.min.css" />
 	</head>
 	<body>
 		<!-- Верхня лінія (навигация) -->
 		<header class="page-header">
 			<div class="container flex-container">
-				<nav class="page-nav flex-container">
-					<a
-						class="logo logo--dark flex-container link logo--append"
-						href="./index.html"
-						lang="en"
-					>
-						<span class="logo--accent">Web</span>
-						Studio
-					</a>
-					<ul class="nav-list flex-container list">
-						<li class="nav-list__item">
-							<a class="nav-list__link active-link link" href="./index.html">
-								Студія
-							</a>
-						</li>
-						<li class="nav-list__item">
-							<a class="nav-list__link link" href="./portfolio.html">
-								Портфоліо
-							</a>
-						</li>
-						<li class="nav-list__item">
-							<a class="nav-list__link link" href="#contacts">Контакти</a>
-						</li>
-					</ul>
-				</nav>
-				<ul class="contact-group flex-container list">
-					<li class="contact-group__item">
-						<a
-							class="contact-group__link link flex-container"
-							href="mailto:info@devstudio.com"
-						>
-							<svg
-								class="contact-group__icon--append icon"
-								width="16"
-								height="12"
-							>
-								<use href="./images/img-index/icons.svg#icon-envelope"></use>
-							</svg>
-							<p>info@devstudio.com</p>
-						</a>
-					</li>
-					<li class="contact-group__item">
-						<a
-							class="contact-group__link link flex-container"
-							href="tel:+380961111111"
-						>
-							<svg
-								class="contact-group__icon--append icon"
-								width="10"
-								height="16"
-							>
-								<use href="./images/img-index/icons.svg#icon-smartphone"></use>
-							</svg>
-							<p>+38 096 111 11 11</p>
-						</a>
-					</li>
-				</ul>
+				<a
+					class="logo logo--dark flex-container link logo--append"
+					href="./index.html"
+					lang="en"
+				>
+					<span class="logo--accent">Web</span>
+					Studio
+				</a>
+				<button
+					type="button"
+					class="page-header__menu"
+					aria-expanded="false"
+					aria-controls="menu-nav"
+					data-menu-button
+				>
+					<svg width="40" height="40" aria-label="Перемикач мобільного меню">
+						<use
+							class="icon-cross icon"
+							href="./images/img-index/icons.svg#icon-cross"
+						></use>
+						<use
+							class="icon-menu icon"
+							href="./images/img-index/icons.svg#icon-menu"
+						></use>
+					</svg>
+				</button>
+				<div class="menu-nav" id="menu-nav" data-menu>
+					<nav class="page-nav">
+						<ul class="nav-list list">
+							<li class="nav-list__item">
+								<a class="nav-list__link active-link link" href="./index.html">
+									Студія
+								</a>
+							</li>
+							<li class="nav-list__item">
+								<a class="nav-list__link link" href="./portfolio.html">
+									Портфоліо
+								</a>
+							</li>
+							<li class="nav-list__item">
+								<a class="nav-list__link link" href="#contacts">Контакти</a>
+							</li>
+						</ul>
+					</nav>
+
+					<div class="contacts__wrapper">
+						<ul class="contact-group list">
+							<li class="contact-group__item">
+								<a
+									class="contact-group__link mail link flex-container"
+									href="mailto:info@devstudio.com"
+								>
+									<svg
+										class="contact-group__icon--append icon"
+										width="16"
+										height="12"
+									>
+										<use
+											href="./images/img-index/icons.svg#icon-envelope"
+										></use>
+									</svg>
+									<p>info@devstudio.com</p>
+								</a>
+							</li>
+							<li class="contact-group__item tel">
+								<a
+									class="contact-group__link tel link flex-container"
+									href="tel:+380961111111"
+								>
+									<svg
+										class="contact-group__icon--append icon"
+										width="10"
+										height="16"
+									>
+										<use
+											href="./images/img-index/icons.svg#icon-smartphone"
+										></use>
+									</svg>
+									<p>+38 096 111 11 11</p>
+								</a>
+							</li>
+						</ul>
+						<ul class="social-group list">
+							<li class="social-group__item">
+								<a class="social-group__link link" href="">Instagram</a>
+							</li>
+							<li class="social-group__item">
+								<a class="social-group__link link" href="">Twitter</a>
+							</li>
+							<li class="social-group__item">
+								<a class="social-group__link link" href="">Facebook</a>
+							</li>
+							<li class="social-group__item">
+								<a class="social-group__link link" href="">LinkedIn</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</header>
 		<!-- Унікальний контент -->
@@ -95,11 +136,7 @@
 						<br />
 						вашого бізнесу
 					</h1>
-					<button
-						class="modal-btn btn btn--dark flex-container"
-						data-modal-open
-						type="button"
-					>
+					<button class="modal-btn btn btn--dark" data-modal-open type="button">
 						Замовити послугу
 					</button>
 				</div>
@@ -110,9 +147,7 @@
 					<h2 class="feature__title visually-hidden">Особливості</h2>
 					<ul class="feature__list list">
 						<li class="feature__item">
-							<div
-								class="feature__bg-img feature__bg-img--bottom flex-container"
-							>
+							<div class="feature__bg-img feature__bg-img--bottom">
 								<svg class="icon" width="70" height="70">
 									<use href="./images/img-index/icons.svg#icon-antenna"></use>
 								</svg>
@@ -124,9 +159,7 @@
 							</p>
 						</li>
 						<li class="feature__item">
-							<div
-								class="feature__bg-img feature__bg-img--bottom flex-container"
-							>
+							<div class="feature__bg-img feature__bg-img--bottom">
 								<svg class="icon" width="70" height="70">
 									<use href="./images/img-index/icons.svg#icon-clock"></use>
 								</svg>
@@ -138,9 +171,7 @@
 							</p>
 						</li>
 						<li class="feature__item">
-							<div
-								class="feature__bg-img feature__bg-img--bottom flex-container"
-							>
+							<div class="feature__bg-img feature__bg-img--bottom">
 								<svg class="icon" width="70" height="70">
 									<use href="./images/img-index/icons.svg#icon-diagram"></use>
 								</svg>
@@ -151,9 +182,7 @@
 							</p>
 						</li>
 						<li class="feature__item">
-							<div
-								class="feature__bg-img feature__bg-img--bottom flex-container"
-							>
+							<div class="feature__bg-img feature__bg-img--bottom">
 								<svg class="icon" width="70" height="70">
 									<use href="./images/img-index/icons.svg#icon-astronaut"></use>
 								</svg>
@@ -210,11 +239,64 @@
 					<h2 class="section__title">Наша команда</h2>
 					<ul class="team__list list">
 						<li class="team__item">
-							<img
-								class="team__img"
-								src="./images/img-index/team-img1.jpg"
-								alt="Ігор Дем'яненко"
-							/>
+							<picture>
+								<source
+									srcset="
+										./images/team-img1-270.webp    1x,
+										./images/team-img1-270@2x.webp 2x,
+										./images/team-img1-270@3x.webp 3x
+									"
+									media="(min-width: 1200px)"
+									type="image/webp"
+								/>
+								<source
+									srcset="
+										./images/team-img1-270.jpg    1x,
+										./images/team-img1-270@2x.jpg 2x,
+										./images/team-img1-270@3x.jpg 3x
+									"
+									media="(min-width: 1200px)"
+									type="image/jpeg"
+								/>
+								<source
+									srcset="
+										./images/team-img1-354.webp    1x,
+										./images/team-img1-354@2x.webp 2x
+									"
+									media="(min-width: 768px)"
+									type="image/webp"
+								/>
+								<source
+									srcset="
+										./images/team-img1-354.jpg    1x,
+										./images/team-img1-354@2x.jpg 2x
+									"
+									media="(min-width: 768px)"
+									type="image/jpeg"
+								/>
+								<source
+									srcset="
+										./images/team-img1-450.webp    1x,
+										./images/team-img1-450@2x.webp 2x
+									"
+									media="(min-width: 767px)"
+									type="image/webp"
+								/>
+								<source
+									srcset="
+										./images/team-img1-450.jpg    1x,
+										./images/team-img1-450@2x.jpg 2x
+									"
+									media="(max-width: 767px)"
+									type="image/jpeg"
+								/>
+
+								<img
+									class="team__img"
+									src="./images/team-img1-450.jpg"
+									alt="Ігор Дем'яненко"
+								/>
+							</picture>
 							<div class="team__inner">
 								<h3 class="team__name team__name--bottom">Ігор Дем'яненко</h3>
 								<p lang="en" class="team__position team__position--bottom">
@@ -277,11 +359,62 @@
 							</div>
 						</li>
 						<li class="team__item">
-							<img
-								class="team__img"
-								src="./images/img-index/team-img2.jpg"
-								alt="Ольга Рєпіна"
-							/>
+							<picture>
+								<source
+									srcset="
+										./images/team-img2-270.webp    1x,
+										./images/team-img2-270@2x.webp 2x,
+										./images/team-img2-270@3x.webp 3x
+									"
+									media="(min-width: 1200px)"
+									type="image/webp"
+								/>
+								<source
+									srcset="
+										./images/team-img2-270.jpg    1x,
+										./images/team-img2-270@2x.jpg 2x,
+										./images/team-img2-270@3x.jpg 3x
+									"
+									media="(min-width: 1200px)"
+								/>
+								<source
+									srcset="
+										./images/team-img2-354.webp    1x,
+										./images/team-img2-354@2x.webp 2x
+									"
+									media="(min-width: 768px)"
+									type="image/webp"
+								/>
+								<source
+									srcset="
+										./images/team-img2-354.jpg    1x,
+										./images/team-img2-354@2x.jpg 2x
+									"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="
+										./images/team-img2-450.webp    1x,
+										./images/team-img2-450@2x.webp 2x
+									"
+									media="(min-width: 767px)"
+									type="image/webp"
+								/>
+								<source
+									srcset="
+										./images/team-img2-450.jpg    1x,
+										./images/team-img2-450@2x.jpg 2x
+									"
+									media="(max-width: 767px)"
+								/>
+
+								<img
+									class="team__img"
+									src="./images/team-img2-450.jpg"
+									alt="Ольга Рєпіна"
+								/>
+							</picture>
+
 							<div class="team__inner">
 								<h3 class="team__name team__name--bottom">Ольга Рєпіна</h3>
 								<p lang="en" class="team__position team__position--bottom">
@@ -344,11 +477,62 @@
 							</div>
 						</li>
 						<li class="team__item">
-							<img
-								class="team__img"
-								src="./images/img-index/team-img3.jpg"
-								alt="Микола Тарасов"
-							/>
+							<picture>
+								<source
+									srcset="
+										./images/team-img3-270.webp    1x,
+										./images/team-img3-270@2x.webp 2x,
+										./images/team-img3-270@3x.webp 3x
+									"
+									media="(min-width: 1200px)"
+									type="image/webp"
+								/>
+								<source
+									srcset="
+										./images/team-img3-270.jpg    1x,
+										./images/team-img3-270@2x.jpg 2x,
+										./images/team-img3-270@3x.jpg 3x
+									"
+									media="(min-width: 1200px)"
+								/>
+								<source
+									srcset="
+										./images/team-img3-354.webp    1x,
+										./images/team-img3-354@2x.webp 2x
+									"
+									media="(min-width: 768px)"
+									type="image/webp"
+								/>
+								<source
+									srcset="
+										./images/team-img3-354.jpg    1x,
+										./images/team-img3-354@2x.jpg 2x
+									"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="
+										./images/team-img3-450.webp    1x,
+										./images/team-img3-450@2x.webp 2x
+									"
+									media="(min-width: 767px)"
+									type="image/webp"
+								/>
+								<source
+									srcset="
+										./images/team-img3-450.jpg    1x,
+										./images/team-img3-450@2x.jpg 2x
+									"
+									media="(max-width: 767px)"
+								/>
+
+								<img
+									class="team__img"
+									src="./images/team-img3-450.jpg"
+									alt="Микола Тарасов"
+								/>
+							</picture>
+
 							<div class="team__inner">
 								<h3 class="team__name team__name--bottom">Микола Тарасов</h3>
 								<p lang="en" class="team__position team__position--bottom">
@@ -411,11 +595,62 @@
 							</div>
 						</li>
 						<li class="team__item">
-							<img
-								class="team__img"
-								src="./images/img-index/team-img4.jpg"
-								alt="Михайло Єрмаков"
-							/>
+							<picture>
+								<source
+									srcset="
+										./images/team-img4-270.webp    1x,
+										./images/team-img4-270@2x.webp 2x,
+										./images/team-img4-270@3x.webp 3x
+									"
+									media="(min-width: 1200px)"
+									type="image/webp"
+								/>
+								<source
+									srcset="
+										./images/team-img4-270.jpg    1x,
+										./images/team-img4-270@2x.jpg 2x,
+										./images/team-img4-270@3x.jpg 3x
+									"
+									media="(min-width: 1200px)"
+								/>
+								<source
+									srcset="
+										./images/team-img4-354.webp    1x,
+										./images/team-img4-354@2x.webp 2x
+									"
+									media="(min-width: 768px)"
+									type="image/webp"
+								/>
+								<source
+									srcset="
+										./images/team-img4-354.jpg    1x,
+										./images/team-img4-354@2x.jpg 2x
+									"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="
+										./images/team-img4-450.webp    1x,
+										./images/team-img4-450@2x.webp 2x
+									"
+									media="(min-width: 767px)"
+									type="image/webp"
+								/>
+								<source
+									srcset="
+										./images/team-img4-450.jpg    1x,
+										./images/team-img4-450@2x.jpg 2x
+									"
+									media="(max-width: 767px)"
+								/>
+
+								<img
+									class="team__img"
+									src="./images/team-img4-450.jpg"
+									alt="Михайло Єрмаков"
+								/>
+							</picture>
+
 							<div class="team__inner">
 								<h3 class="team__name team__name--bottom">Михайло Єрмаков</h3>
 								<p lang="en" class="team__position team__position--bottom">
@@ -557,7 +792,7 @@
 		</main>
 		<!-- Підвал -->
 		<footer id="contacts" class="page-footer">
-			<div class="container flex-container page-footer__container--baseline">
+			<div class="container page-footer__container--baseline">
 				<div class="page-footer__address--append">
 					<a
 						class="flex-container logo page-footer__logo--bottom logo--light link"
@@ -772,5 +1007,6 @@
 		</script>
 
 		<script src="./js/modal.js"></script>
+		<script src="./js/mobile-menu.js"></script>
 	</body>
 </html>
