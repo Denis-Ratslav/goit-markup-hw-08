@@ -3,22 +3,32 @@
 }
 
 .team__list {
-	display: flex;
-	flex-wrap: wrap;
-	@media screen and (min-width: $desktop) {
+	@media screen and (min-width: $tablet) {
+		display: flex;
+		flex-wrap: wrap;
+
 		margin: calc(-1 * var(--gap-card-set) / 2);
 	}
 }
 
 .team__item {
-	max-width: 270px;
-	
+	max-width: 450px;
 	background-color: var(--color-primary-text-light);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
 		0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 0px 0px 4px 4px;
-	@media screen and (min-width: $desktop) {
+
+	@media screen and (max-width: calc($tablet - 1px)) {
+		&:not(:last-child) {
+			margin-bottom: var(--gap-card-set);
+		}
+	}
+	@media screen and (min-width: $tablet) {
+		flex-basis: calc((100% - 2 * (var(--gap-card-set))) / 2);
 		margin: calc(var(--gap-card-set) / 2);
+	}
+	@media screen and (min-width: $desktop) {
+		flex-basis: calc((100% - 4 * (var(--gap-card-set))) / 4);
 	}
 }
 
