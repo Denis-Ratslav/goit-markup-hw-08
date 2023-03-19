@@ -2,12 +2,14 @@
 	@media screen and (min-width: $tablet) {
 		display: flex;
 		flex-wrap: wrap;
+
 		margin: calc(-1 * var(--gap-card-set) / 2);
 	}
 }
 
 .projects__item {
 	position: relative;
+	display: flex;
 	max-width: 450px;
 
 	@media screen and (max-width: calc($tablet - 1px)) {
@@ -16,6 +18,7 @@
 		}
 	}
 	@media screen and (min-width: $tablet) {
+		// display: flex;
 		flex-basis: calc((100% - 2 * (var(--gap-card-set))) / 2);
 		margin: calc(var(--gap-card-set) / 2);
 	}
@@ -25,7 +28,9 @@
 }
 
 .projects__link {
-	display: block;
+	// display: block;
+	display: flex;
+	flex-direction: column;
 	box-shadow: none;
 	transition: box-shadow var(--duration) var(--timing-function);
 
@@ -72,6 +77,9 @@
 	color: var(--color-primary-text-light);
 	opacity: 0;
 	transition: opacity var(--duration) var(--timing-function) 250ms;
+	@media screen and (max-width: calc($mobile - 1px)) {
+		font-size: 4vw;
+	}
 
 	.projects__link:hover &,
 	.projects__link:focus & {
@@ -80,7 +88,9 @@
 }
 
 .projects__wrapper {
+	flex-grow: 1;
 	padding: 20px 22px 20px 24px;
+	max-height: 100%;
 	background-color: var(--color-primary-text-light);
 	border: 1px solid var(--color-border-project);
 	border-top: none;

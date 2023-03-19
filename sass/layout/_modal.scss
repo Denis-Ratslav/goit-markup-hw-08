@@ -204,7 +204,15 @@
 }
 
 // -----------------media-------------------------
-
+@media screen and (max-width: calc($mobile - 1px)) {
+	.modal__title {
+		font-size: 4vw;
+	}
+	.terms__label,
+	.terms__linkt {
+		font-size: 2vw;
+	}
+}
 @media screen and (min-width: $mobile) and (max-width: calc($tablet - 1px)) {
 	.modal {
 		width: 450px;
