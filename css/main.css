@@ -1232,17 +1232,11 @@ textarea {
 }
 
 .terms__label {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--color-secondary-text-light);
   cursor: pointer;
-}
-
-.terms__text {
-  margin-right: 5px;
 }
 
 .terms__linkt {
@@ -1295,9 +1289,9 @@ textarea {
   .modal__title {
     font-size: 4vw;
   }
-  .terms__label,
-.terms__linkt {
-    font-size: 2vw;
+  .modal {
+    padding-left: 8vw;
+    padding-right: 8vw;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
